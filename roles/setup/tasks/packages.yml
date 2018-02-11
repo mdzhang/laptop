@@ -26,6 +26,13 @@
     deb: "{{ item }}"
   with_items: "{{ remote_packages }}"
 
+- name: "Install remote executable '{{ item }}'"
+  unarchive:
+    src: "{{ item }}"
+    dest: /usr/local/bin
+    remote_src: yes
+  with_items: "{{ remote_executables }}"
+
 - name: Remove useless packages from the cache
   apt:
     autoclean: yes
