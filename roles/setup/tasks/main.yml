@@ -1,3 +1,11 @@
+- name: Determine OS
+  shell: uname
+  register: uname_contents
+
 - name: Install packages
   include: packages.yml
+  when: uname_contents.stdout.find('Linux') != -1
 
+- name: Install packages
+  include: homebrew.yml
+  when: uname_contents.stdout.find('Darwin') != -1
