@@ -2,10 +2,13 @@
   shell: uname
   register: uname_contents
 
-- name: Install packages
+- name: Install Debian packages
   include: packages.yml
   when: uname_contents.stdout.find('Linux') != -1
 
-- name: Install packages
+- name: Install macOS packages
   include: homebrew.yml
   when: uname_contents.stdout.find('Darwin') != -1
+
+- name: Install python packages
+  include: python.yml
