@@ -25,6 +25,7 @@ packages:
   - vim-gtk
   - xclip
   - zsh
+  - tmux
   # R packages
   # - r-base
   # - r-base-dev
