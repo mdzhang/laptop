@@ -33,6 +33,6 @@ echo "cleaning up..."
 
 rm -Rfv /tmp/$installdir
 
-echo "and we are done! Enjoy!"
+echo "done."
 
 exit 0
