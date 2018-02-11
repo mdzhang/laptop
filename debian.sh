@@ -11,7 +11,7 @@
 # - Run postinstall script
 
 sudo apt-get -y install \
-  python-setuptools python3 python3-dev build-essential libpq-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev
+  python-setuptools python3 python3-dev python3-pip build-essential libpq-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev
 
 sudo easy_install pip
 sudo easy_install ansible
