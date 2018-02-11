@@ -1,0 +1,39 @@
+---
+# list of applications to install
+general:
+local_home: "{{ lookup('env','HOME') }}"
+
+repositories:
+  ppa:
+    - "ppa:phoerious/keepassxc"
+
+# ubuntu packages
+packages:
+  - bcmwl-kernel-source   # kubuntu wifi fix
+  - curl
+  - git
+  - httpie        # pretty curl/wget
+  - jq            # json processor
+  - keepassxc     # password manager
+  - miller        # csv processor
+  - symlinks
+  - tree          # pretty directories
+  - vim-gtk
+  - xclip
+  - zsh
+  # python packages
+  - python-setuptools
+  - python3
+  - python3-dev
+  - build-essential
+  - libpq-dev
+  - libxml2-dev
+  - libxslt1-dev
+  - libldap2-dev
+  - libsasl2-dev
+  - libffi-dev
+  - libssl-dev
+
+remote_packages:
+  - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
+
