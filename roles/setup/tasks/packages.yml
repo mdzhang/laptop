@@ -28,6 +28,17 @@
 
 - include_tasks: tarexe.yml
   with_items: "{{ remote_executables }}"
+  when: item.url.endswith("tar.gz")
+
+- name: Install remote executable
+  get_url:
+    url: "{{ item.url }}"
+    dest: "~/.local/bin/{{ item.name }}"
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+    mode: 0755
+  with_items: "{{ remote_executables }}"
+  when: not item.url.endswith("tar.gz")
 
 - name: Remove useless packages from the cache
   apt:
