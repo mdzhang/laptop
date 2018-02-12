@@ -12,3 +12,6 @@
 
 - name: Install python packages
   include: python.yml
+
+- name: Install ruby packages
+  include: ruby.yml

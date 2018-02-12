@@ -16,6 +16,7 @@ packages:
   - ctags
   - direnv
   - curl
+  - lynx          # tui browser
   - git
   - httpie        # pretty curl/wget
   - jq            # json processor
@@ -27,6 +28,8 @@ packages:
   - xclip
   - zsh
   - tmux
+  # ruby packages
+  - ruby-dev
   # R packages
   # - r-base
   # - r-base-dev
@@ -43,6 +46,9 @@ packages:
   - libsasl2-dev
   - libffi-dev
   - libssl-dev
+  # other dev tools
+  - sqlite3
+  - libsqlite3-dev
 
 remote_packages:
   - "https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb"
@@ -63,3 +69,6 @@ python_packages:
   - yapf
   - mackup
   - percol      # interactive cli filtering
+
+ruby_packages:
+  - vmail       # vim-based email client
