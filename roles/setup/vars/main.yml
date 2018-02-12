@@ -54,9 +54,12 @@ remote_executables:
     name: ccat
   - url: "https://github.com/rgburke/grv/releases/download/v0.1.2/grv_v0.1.2_linux64"
     name: grv
+#   - url: "https://github.com/bcicen/ctop/releases/download/v0.7/ctop-0.7-linux-amd64"
+#     name: ctop
 
 python_packages:
   - pre-commit
   - flake8
   - yapf
   - mackup
+  - percol      # interactive cli filtering
