@@ -1,0 +1,21 @@
+---
+# Grab a tarball, download it, uncompress it, pull out an executable and add to path
+
+- set_fact:
+    bin_path: ~/.local/bin
+
+- name: Grab and unpack tarball
+  unarchive:
+    src: "{{ item.url }}"
+    dest: /tmp
+    remote_src: yes
+    list_files: yes
+  register: archive_contents
+
+- name: Copy to bin
+  copy:
+    src: "/tmp/{{ archive_contents.files[0] }}{{ item.name }}"
+    dest: "{{ bin_path }}/{{ item.name }}"
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+    mode: 0755

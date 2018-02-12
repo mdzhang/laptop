@@ -26,11 +26,7 @@
     deb: "{{ item }}"
   with_items: "{{ remote_packages }}"
 
-- name: Install remote tarball to local executable
-  unarchive:
-    src: "{{ item }}"
-    dest: /usr/local/bin
-    remote_src: yes
+- include_tasks: tarexe.yml
   with_items: "{{ remote_executables }}"
 
 - name: Remove useless packages from the cache
