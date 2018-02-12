@@ -9,6 +9,9 @@
 # - Run preinstall script
 # - Pick which directories to GNU stow and stow them
 # - Run postinstall script
+# - Register gpg key: https://gist.github.com/ankurk91/c4f0e23d76ef868b139f3c28bde057fc
+# - Switch to dark theme
+# - Drag menubar to lefthand side
 
 sudo apt-get -y install \
   python-setuptools python3 python3-dev python3-pip build-essential libpq-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev
