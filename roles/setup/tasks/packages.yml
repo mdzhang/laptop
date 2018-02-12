@@ -5,28 +5,28 @@
   apt:
     upgrade: dist
 
-- name: Run the equivalent of "apt-get update" as a separate step
+- name: apt-get update
   apt:
     update_cache: yes
 
-- name: "Add repository '{{ item.name }}' from PPA"
+- name: Add PPAs
   apt_repository:
     repo: "{{ item }}"
     state: present
   with_items: "{{ repositories.ppa }}"
 
-- name: "Install package '{{ item }}'"
+- name: Install packages
   apt:
     name: "{{ item }}"
     state: present
   with_items: "{{ packages }}"
 
-- name: "Install remote package '{{ item }}'"
+- name: Install remote packages
   apt:
     deb: "{{ item }}"
   with_items: "{{ remote_packages }}"
 
-- name: "Install remote executable '{{ item }}'"
+- name: Install remote tarball to local executable
   unarchive:
     src: "{{ item }}"
     dest: /usr/local/bin

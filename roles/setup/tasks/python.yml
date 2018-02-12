@@ -4,4 +4,6 @@
     executable: pip3
     extra_args: --user
   with_items: "{{ python_packages }}"
+  become: yes
+  become_user: mdzhang
 
