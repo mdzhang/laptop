@@ -63,6 +63,7 @@ remote_executables:
 #     name: ctop
 
 python_packages:
+  - buku  # cli bookmark manager
   - pre-commit
   - flake8
   - yapf
