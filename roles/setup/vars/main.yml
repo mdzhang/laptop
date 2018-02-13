@@ -16,6 +16,7 @@ repositories:
 
 # ubuntu packages
 packages:
+  - openvpn
   - docker-ce
   - silversearcher-ag
   - bcmwl-kernel-source   # kubuntu wifi fix

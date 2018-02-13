@@ -1,0 +1,17 @@
+- name: Create directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+    recurse: yes
+  with_items:
+    - ~/.local/share/nordvpn
+
+- name: Grab Nordvpn ovpn files
+  unarchive:
+    src: https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip
+    dest: ~/.local/share/nordvpn/
+    remote_src: yes
+
+

@@ -2,6 +2,9 @@
   shell: uname
   register: uname_contents
 
+- name: Install openvpn profiles
+  include: vpn.yml
+
 - name: Install Debian packages
   include: packages.yml
   when: uname_contents.stdout.find('Linux') != -1
