@@ -8,9 +8,15 @@ repositories:
   ppa:
     - "ppa:phoerious/keepassxc"
     - "ppa:marutter/rrutter"
+  url:
+    - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
+  key:
+    - url: "https://download.docker.com/linux/ubuntu/gpg"
+      id: 0EBFCD88
 
 # ubuntu packages
 packages:
+  - docker-ce
   - silversearcher-ag
   - bcmwl-kernel-source   # kubuntu wifi fix
   - ctags

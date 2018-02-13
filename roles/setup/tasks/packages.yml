@@ -9,11 +9,24 @@
   apt:
     update_cache: yes
 
+- name: Add keys
+  apt_key:
+    url: "{{ item.url }}"
+    id: "{{ item.id }}"
+    state: present
+  with_items: "{{ repositories.key }}"
+
 - name: Add PPAs
   apt_repository:
     repo: "{{ item }}"
     state: present
   with_items: "{{ repositories.ppa }}"
+
+- name: Add additional repos
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  with_items: "{{ repositories.url }}"
 
 - name: Install packages
   apt:
