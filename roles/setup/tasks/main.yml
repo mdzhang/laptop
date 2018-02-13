@@ -15,3 +15,6 @@
 
 - name: Install ruby packages
   include: ruby.yml
+
+- name: Install go and go packages
+  include: golang.yml

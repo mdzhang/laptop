@@ -51,13 +51,12 @@ packages:
   - libsqlite3-dev
 
 remote_packages:
-  - "https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb"
   - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
   # - "https://download1.rstudio.org/rstudio-xenial-1.1.423-amd64.deb"
 
 remote_executables:
-  - url: "https://github.com/jingweno/ccat/releases/download/v1.1.0/linux-amd64-1.1.0.tar.gz"
-    name: ccat
+  - url: "https://github.com/peco/peco/releases/download/v0.5.2/peco_linux_amd64.tar.gz"
+    name: peco     # interactive cli filtering
   - url: "https://github.com/rgburke/grv/releases/download/v0.1.2/grv_v0.1.2_linux64"
     name: grv
 #   - url: "https://github.com/bcicen/ctop/releases/download/v0.7/ctop-0.7-linux-amd64"
@@ -68,8 +67,13 @@ python_packages:
   - flake8
   - yapf
   - mackup
-  - percol         # interactive cli filtering
   - speedtest-cli  # test internet speed
 
 ruby_packages:
   - vmail       # vim-based email client
+
+go_version: 1.9.4
+go_packages:
+  - github.com/motemen/ghq    # for remote repo directory management
+  - github.com/jingweno/ccat
+  - github.com/knqyf263/pet
