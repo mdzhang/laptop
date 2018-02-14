@@ -26,3 +26,8 @@
 - name: Install go and go packages
   include: golang.yml
   when: uname_contents.stdout.find('Linux') != -1
+
+- name: Grab git repos
+  include_tasks: gitrepos.yml
+  with_items: "{{ git_repos }}"
+

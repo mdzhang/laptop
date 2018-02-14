@@ -2,7 +2,8 @@
 # list of applications to install
 general:
 local_home: "{{ lookup('env','HOME') }}"
-user_name: "{{ lookup('env','USER') }}"
+# don't look this up in env - linux runs as sudo
+user_name: mdzhang
 
 repositories:
   ppa:
@@ -85,3 +86,6 @@ go_packages:
   - github.com/motemen/ghq    # for remote repo directory management
   - github.com/jingweno/ccat
   - github.com/knqyf263/pet
+
+git_repos:
+  - github.com/riywo/anyenv
