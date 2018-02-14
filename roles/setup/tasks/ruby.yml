@@ -4,4 +4,3 @@
     state: present
     user_install: yes
   with_items: "{{ ruby_packages }}"
-

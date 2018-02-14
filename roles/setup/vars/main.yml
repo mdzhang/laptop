@@ -2,7 +2,7 @@
 # list of applications to install
 general:
 local_home: "{{ lookup('env','HOME') }}"
-user_name: mdzhang
+user_name: "{{ lookup('env','USER') }}"
 
 repositories:
   ppa:

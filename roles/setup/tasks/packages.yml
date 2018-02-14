@@ -1,5 +1,5 @@
 ---
-# Install packages
+# Install Ubuntu packages
 
 - name: Update all packages to the latest version
   apt:

@@ -16,8 +16,13 @@
 - name: Install python packages
   include: python.yml
 
+# TODO: Ansible won't respect $GEM_HOME, so this fails on macOS
 - name: Install ruby packages
   include: ruby.yml
+  when: uname_contents.stdout.find('Linux') != -1
 
+# TODO: Reconcile with goenv /usr/local/bin/go on macOS v straight
+#       install from tarball on Linux
 - name: Install go and go packages
   include: golang.yml
+  when: uname_contents.stdout.find('Linux') != -1

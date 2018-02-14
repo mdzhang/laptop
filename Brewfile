@@ -1,10 +1,8 @@
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
-tap 'thoughtbot/formulae'
 tap 'sgeb/mutt'
 tap 'eqnxio/equinox'
-tap 'homebrew/science'
 
 #
 # override old, shitty, or missing system defaults
@@ -22,9 +20,9 @@ brew 'grep', args: ['with-default-names']
 brew 'openssl'
 brew 'readline'
 
-brew 'newsboat'
-brew 'irssi'
-brew 'sgeb/mutt', args: ['with-trash-patch', 'with-sidebar-patch', 'with-gmail-server-search-patch', 'with-gmail-labels-patch', 'with-forwref-patch']
+# brew 'newsboat'
+# brew 'irssi'
+brew 'sgeb/mutt/mutt', args: ['with-trash-patch', 'with-sidebar-patch', 'with-gmail-server-search-patch', 'with-gmail-labels-patch', 'with-forwref-patch']
 brew 'nmap'
 brew 'urlview'
 brew 'watch'
@@ -34,6 +32,9 @@ brew 'wget'
 #
 # convenience cli utilities
 #
+
+# symlink farm manager for dotfiles
+brew 'stow'
 
 # syntax highlighted cat
 brew 'ccat'
@@ -59,18 +60,10 @@ brew 'https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb'
 # pretty list dirs
 brew 'tree'
 
-# interactive selection of unix pipe output
-brew 'fpp'
-
-# see progress of coreutils cmds
-brew 'progress'
-
 cask 'iterm2'
 
-cask 'dnsmasq'
-
 brew 'knqyf263/pet/pet'
-brew 'fzf'
+brew 'peco'
 
 
 #
@@ -145,7 +138,6 @@ brew 'direnv'
 # brew 'graphviz'
 brew 'pre-commit'
 # brew 'qcachegrind'
-brew 'rcm'
 # brew 'equinox/release-tool'
 # brew 'kubernetes-helm'
 # brew 'kubernetes-cli'
@@ -169,7 +161,7 @@ cask 'sourcetree'
 # lifeblood aka productivity and required apps
 #
 
-cask 'dropbox'
+# cask 'dropbox'
 # cask 'alfred'
 # cask 'bartender'
 cask 'bettertouchtool'
@@ -177,7 +169,7 @@ cask 'caffeine'
 cask 'disk-inventory-x'
 cask 'flux'
 # cask 'flycut'
-cask 'google-chrome'
+# cask 'google-chrome'
 # cask 'google-drive'
 # cask 'slack'
 cask 'the-unarchiver'
