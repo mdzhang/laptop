@@ -18,7 +18,7 @@
     PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
 
 - name: Install envs
-  shell: "anyenv install {{ item }}"
+  shell: "anyenv install -s {{ item }}"
   environment:
     ANYENV_ROOT: "{{ anyenv_root }}"
     PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"

@@ -1,0 +1,69 @@
+# Additional package sources to add, and their keys
+repositories:
+  ppa:
+    - "ppa:phoerious/keepassxc"
+    - "ppa:marutter/rrutter"
+  url:
+    - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
+  key:
+    - url: "https://download.docker.com/linux/ubuntu/gpg"
+      id: 0EBFCD88
+
+# Packages from the default Ubuntu or above sources
+packages:
+  # base dev tools
+  - build-essential
+  - libpq-dev
+  - libxml2-dev
+  - libxslt1-dev
+  - libldap2-dev
+  - libsasl2-dev
+  - libffi-dev
+  - libssl-dev
+  - sqlite3
+  - libsqlite3-dev
+  # cli utilities
+  - openvpn
+  - docker-ce
+  - silversearcher-ag
+  - bcmwl-kernel-source   # kubuntu wifi fix
+  - ctags
+  - direnv
+  - curl
+  - lynx          # tui browser
+  - git
+  - httpie        # pretty curl/wget
+  - jq            # json processor
+  - keepassxc     # password manager
+  - miller        # csv processor
+  - symlinks
+  - tree          # pretty directories
+  - vim-gtk
+  - xclip
+  - zsh
+  - tmux
+  # ruby packages
+  - ruby-dev
+  # R packages
+  # - r-base
+  # - r-base-dev
+  # python packages
+  - python-setuptools
+  - python3
+  - python3-dev
+  - python3-pip
+
+# Packages to install from remote source, when no PPA is available
+remote_packages:
+  - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
+  # - "https://download1.rstudio.org/rstudio-xenial-1.1.423-amd64.deb"
+
+# Remote executables to install
+# those that end in tar.gz will be unarchived before being moved to bin
+remote_executables:
+  - url: "https://github.com/peco/peco/releases/download/v0.5.2/peco_linux_amd64.tar.gz"
+    name: peco     # interactive cli filtering
+  - url: "https://github.com/rgburke/grv/releases/download/v0.1.2/grv_v0.1.2_linux64"
+    name: grv
+#   - url: "https://github.com/bcicen/ctop/releases/download/v0.7/ctop-0.7-linux-amd64"
+#     name: ctop

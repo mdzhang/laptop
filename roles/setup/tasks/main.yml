@@ -1,17 +1,5 @@
-- name: Determine OS
-  shell: uname
-  register: uname_contents
-
 - name: Install openvpn profiles
   include: vpn.yml
-
-- name: Install Debian packages
-  include: packages.yml
-  when: uname_contents.stdout.find('Linux') != -1
-
-- name: Install macOS packages
-  include: homebrew.yml
-  when: uname_contents.stdout.find('Darwin') != -1
 
 - name: Install env version managers
   include: anyenv.yml
@@ -24,10 +12,10 @@
 # TODO: Ansible won't respect $GEM_HOME, so this fails on macOS
 - name: Install ruby packages
   include: ruby.yml
-  when: uname_contents.stdout.find('Linux') != -1
+  when: ansible_os_family == "Debian"
 
 # TODO: Reconcile with goenv /usr/local/bin/go on macOS v straight
 #       install from tarball on Linux
 - name: Install go and go packages
   include: golang.yml
-  when: uname_contents.stdout.find('Linux') != -1
+  when: ansible_os_family == "Debian"

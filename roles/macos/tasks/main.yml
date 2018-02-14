@@ -16,14 +16,14 @@
     name: homebrew/bundle
 
 - name: Check if Brewfile contains updates
-  shell: brew bundle check --file="{{ brewfile| default('./Brewfile') }}"
+  shell: brew bundle check --file="{{ brewfile | default('./Brewfile') }}"
   register: bundle_check_result
   ignore_errors: true
 
 # TODO: Homebrew Cask doesn't handle upgrading already installed applications
 #       at /Applications well at all
 - name: Install apps using Brewfile
-  shell: brew bundle install --file="{{ brewfile| default('./Brewfile') }}"
+  shell: brew bundle install --file="{{ brewfile | default('./Brewfile') }}"
   when: bundle_check_result is failed
 
 - name: Upgrade all packages

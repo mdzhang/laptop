@@ -15,4 +15,3 @@
     remote_src: yes
   args:
     creates: ~/.local/share/nordvpn/
-
