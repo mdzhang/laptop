@@ -13,3 +13,6 @@
     src: https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip
     dest: ~/.local/share/nordvpn/
     remote_src: yes
+  args:
+    creates: ~/.local/share/nordvpn/
+

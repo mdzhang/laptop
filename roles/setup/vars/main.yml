@@ -86,6 +86,3 @@ go_packages:
   - github.com/motemen/ghq    # for remote repo directory management
   - github.com/jingweno/ccat
   - github.com/knqyf263/pet
-
-git_repos:
-  - github.com/riywo/anyenv

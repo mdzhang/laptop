@@ -1,0 +1,26 @@
+---
+
+- name: Set vars
+  set_fact:
+    anyenv_root: "{{ local_home }}/.local/share/anyenv"
+
+- name: Get anyenv
+  git:
+    repo: "https://github.com/riywo/anyenv.git"
+    dest: "{{ anyenv_root }}"
+    clone: yes
+    update: no
+
+- name: Eval anyenv init
+  shell: 'eval "$(anyenv init -)"'
+  environment:
+    ANYENV_ROOT: "{{ anyenv_root }}"
+    PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
+
+- name: Install envs
+  shell: "anyenv install {{ item }}"
+  environment:
+    ANYENV_ROOT: "{{ anyenv_root }}"
+    PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
+  with_items:
+    - goenv
