@@ -1,0 +1,35 @@
+shell_exe: /bin/bash
+
+golang:
+  name: go
+  vm: goenv
+  version: 1.9.4
+  pkgs:
+    - github.com/motemen/ghq    # for remote repo directory management
+    - github.com/jingweno/ccat
+    - github.com/knqyf263/pet
+  install_exe: go
+  install_cmd: get
+
+python:
+  name: python
+  vm: pyenv
+  version: 3.6.3
+  pkgs:
+    - buku  # cli bookmark manager
+    - pre-commit
+    - flake8
+    - yapf
+    - mackup
+    - speedtest-cli  # test internet speed
+  install_exe: pip3
+  install_cmd: install
+
+ruby:
+  name: ruby
+  vm: rbenv
+  version: 2.5.0
+  pkgs:
+    - vmail       # vim-based email client
+  install_exe: gem
+  install_cmd: install

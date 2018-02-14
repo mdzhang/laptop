@@ -1,0 +1,30 @@
+---
+
+- set_fact:
+    langs:
+      - "{{ golang }}"
+      - "{{ python }}"
+      - "{{ ruby }}"
+
+- name: Get anyenv
+  git:
+    repo: "https://github.com/riywo/anyenv.git"
+    dest: "{{ anyenv_root }}"
+    clone: yes
+    update: no
+
+- name: Eval anyenv init
+  shell: 'eval "$(anyenv init -)"'
+  args:
+    executable: "{{ shell_exe }}"
+
+- name: Install envs
+  shell: "anyenv install -s {{ item.vm }}"
+  with_items: "{{ langs }}"
+
+- name: Install langs w/ packages
+  include: per_lang.yml
+  loop_control:
+    loop_var: lang
+  with_items: "{{ langs }}"
+

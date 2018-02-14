@@ -4,6 +4,18 @@
 - set_fact:
     bin_path: ~/.local/bin
 
+- name: Ensure directory exists
+  file:
+    path: "{{ dir }}"
+    state: directory
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+    recurse: yes
+  loop_control:
+    loop_var: dir
+  with_items:
+    - "{{ bin_path }}"
+
 - name: Grab and unpack tarball
   unarchive:
     src: "{{ item.url }}"

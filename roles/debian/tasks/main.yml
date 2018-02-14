@@ -4,10 +4,12 @@
 - name: Update all packages to the latest version
   apt:
     upgrade: dist
+  become: true
 
 - name: apt-get update
   apt:
     update_cache: yes
+  become: true
 
 - name: Add keys
   apt_key:
@@ -15,29 +17,34 @@
     id: "{{ item.id }}"
     state: present
   with_items: "{{ repositories.key }}"
+  become: true
 
 - name: Add PPAs
   apt_repository:
     repo: "{{ item }}"
     state: present
   with_items: "{{ repositories.ppa }}"
+  become: true
 
 - name: Add additional repos
   apt_repository:
     repo: "{{ item }}"
     state: present
   with_items: "{{ repositories.url }}"
+  become: true
 
 - name: Install packages
   apt:
     name: "{{ item }}"
     state: present
   with_items: "{{ packages }}"
+  become: true
 
 - name: Install remote packages
   apt:
     deb: "{{ item }}"
   with_items: "{{ remote_packages }}"
+  become: true
 
 - include_tasks: tarexe.yml
   with_items: "{{ remote_executables }}"
@@ -56,7 +63,9 @@
 - name: Remove useless packages from the cache
   apt:
     autoclean: yes
+  become: true
 
 - name: Remove dependencies that are no longer required
   apt:
     autoremove: yes
+  become: true

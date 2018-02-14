@@ -13,12 +13,12 @@
 # - Switch to dark theme
 # - Drag menubar to lefthand side
 # - Konsole Breeze theme
+# - Key repeat rate to 50 repeat/s, 300ms delay
 
 sudo apt-get -y install \
   python-setuptools python3 python3-dev python3-pip build-essential libpq-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev
 
-sudo easy_install pip
-sudo easy_install ansible
+pip3 install ansible --user
 
 installdir="/tmp/laptop-$RANDOM"
 mkdir $installdir
@@ -30,7 +30,7 @@ if [ ! -d $installdir ]; then
     exit 1
 else
     cd $installdir
-    sudo ansible-playbook -i inventory playbook.yml --verbose
+    ansible-playbook -i inventory playbook.yml --verbose
 fi
 
 echo "cleaning up..."

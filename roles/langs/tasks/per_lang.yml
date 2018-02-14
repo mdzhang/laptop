@@ -1,0 +1,33 @@
+---
+# Install lang and packages with anyenv
+
+- set_fact:
+    vm: 'eval "$(anyenv init -)" && {{ lang.vm }}'
+    exe: "{{ anyenv_root }}/envs/{{ lang.vm }}/versions/{{ lang.version}}/bin/{{ lang.install_exe }}"
+
+- name: "Check if {{ lang.name }} {{ lang.version }} is installed"
+  shell: "{{ vm }} versions | grep {{ lang.version }}"
+  register: check_install
+  changed_when: False
+  ignore_errors: True
+  args:
+    executable: "{{ shell_exe }}"
+
+- name: "Install {{ lang.version }}"
+  shell: "{{ vm }} install {{ lang.version }}"
+  when: check_install is failed
+  args:
+    executable: "{{ shell_exe }}"
+
+- name: "Set default {{ lang.name }} version to {{ lang.version }}"
+  shell: "{{ vm }} global {{ lang.version }}"
+  args:
+    executable: "{{ shell_exe }}"
+
+- name: Install packages
+  shell: "{{ exe }} {{ lang.install_cmd }} {{ pkg }}"
+  loop_control:
+    loop_var: pkg
+  with_items: "{{ lang.pkgs }}"
+  args:
+    executable: "{{ shell_exe }}"

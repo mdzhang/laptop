@@ -1,3 +1,9 @@
+---
+# Install openvpn profiles
+
+- set_fact:
+    target_dir: "{{ data_dir }}/nordvpn"
+
 - name: Create directories
   file:
     path: "{{ item }}"
@@ -6,12 +12,12 @@
     group: "{{ user_name }}"
     recurse: yes
   with_items:
-    - ~/.local/share/nordvpn
+    - "{{ target_dir }}"
 
 - name: Grab Nordvpn ovpn files
   unarchive:
     src: https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip
-    dest: ~/.local/share/nordvpn/
+    dest: "{{ target_dir }}"
     remote_src: yes
   args:
-    creates: ~/.local/share/nordvpn/
+    creates: "{{ target_dir }}"

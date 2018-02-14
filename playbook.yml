@@ -1,7 +1,16 @@
 ---
 - hosts: all
   connection: local
+  vars:
+    user_name: "{{ lookup('env', 'USER') }}"
+    local_home: "/home/{{ user_name }}"
+    data_dir: "{{ local_home }}/.local/share"
+    anyenv_root: "{{ data_dir }}/anyenv"
+  environment:
+    ANYENV_ROOT: "{{ anyenv_root }}"
+    PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
   roles:
     - { role: macos, when: ansible_os_family == "Darwin" }
     - { role: debian, when: ansible_os_family == "Debian" }
-    - setup
+    - { role: langs }
+    - vpn
