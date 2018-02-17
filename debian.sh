@@ -30,7 +30,7 @@ if [ ! -d $installdir ]; then
     exit 1
 else
     cd $installdir
-    ansible-playbook -i inventory playbook.yml --verbose
+    make run
 fi
 
 echo "cleaning up..."

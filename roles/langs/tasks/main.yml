@@ -23,7 +23,7 @@
   with_items: "{{ langs }}"
 
 - name: Install langs w/ packages
-  include: per_lang.yml
+  include_tasks: per_lang.yml
   loop_control:
     loop_var: lang
   with_items: "{{ langs }}"
