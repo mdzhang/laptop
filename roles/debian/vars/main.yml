@@ -23,6 +23,7 @@ packages:
   - sqlite3
   - libsqlite3-dev
   # cli utilities
+  - ncdu                  # tui to explore disk space usage
   - openvpn
   - docker-ce
   - silversearcher-ag
