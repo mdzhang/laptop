@@ -22,6 +22,7 @@ python:
     - yapf
     - mackup
     - speedtest-cli  # test internet speed
+    - rice  # better R shell
   install_exe: pip3
   install_cmd: install
 

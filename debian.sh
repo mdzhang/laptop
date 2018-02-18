@@ -14,6 +14,8 @@
 # - Drag menubar to lefthand side
 # - Konsole Breeze theme
 # - Key repeat rate to 50 repeat/s, 300ms delay
+# - Show date in menubar
+# - Show hidden files in file explorer
 
 sudo apt-get -y install \
   python-setuptools python3 python3-dev python3-pip build-essential libpq-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev git
