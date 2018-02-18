@@ -48,6 +48,9 @@ packages:
   # R packages
   # - r-base
   # - r-base-dev
+  # - r-cran-tidyr
+  # - r-cran-dplyr
+  # - r-cran-ggplot2
   # python packages
   - python-setuptools
   - python3
