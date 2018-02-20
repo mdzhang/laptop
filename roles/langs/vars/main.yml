@@ -11,6 +11,8 @@ golang:
   install_exe: go
   install_cmd: get
 
+# TODO: This freaks out if ~/.local/bin or ~/.local/lib
+#       are on path and already have packages
 python:
   name: python
   vm: pyenv

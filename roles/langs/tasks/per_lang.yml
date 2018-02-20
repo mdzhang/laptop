@@ -31,3 +31,9 @@
   with_items: "{{ lang.pkgs }}"
   args:
     executable: "{{ shell_exe }}"
+
+- name: Update shims
+  shell: "{{ vm }} rehash"
+  args:
+    executable: "{{ shell_exe }}"
+
