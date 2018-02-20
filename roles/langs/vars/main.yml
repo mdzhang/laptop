@@ -16,6 +16,7 @@ python:
   vm: pyenv
   version: 3.6.3
   pkgs:
+    - httpie         # pretty curl/wget
     - buku           # cli bookmark manager
     - pre-commit
     - flake8
@@ -36,4 +37,4 @@ ruby:
   pkgs:
     - vmail          # vim-based email client
   install_exe: gem
-  install_cmd: install --user
+  install_cmd: "install --install-dir $GEM_HOME"

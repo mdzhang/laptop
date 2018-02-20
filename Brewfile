@@ -36,14 +36,8 @@ brew 'wget'
 # symlink farm manager for dotfiles
 brew 'stow'
 
-# syntax highlighted cat
-brew 'ccat'
-
 # jump between common dirs/files
 brew 'z'
-
-# pretty curl/wget
-brew 'httpie'
 
 # corrects previous shell command
 brew 'thefuck'
@@ -62,7 +56,6 @@ brew 'tree'
 
 cask 'iterm2'
 
-brew 'knqyf263/pet/pet'
 brew 'peco'
 
 
@@ -86,17 +79,12 @@ brew 'the_silver_searcher'
 #
 
 
-# brew 'goenv'
-# brew 'golang'
 # brew 'glide'
 brew 'node-build'
 brew 'nodenv'
-brew 'pyenv'
 brew 'pyenv-virtualenv'
 # cask 'r-app'
 # cask 'rstudio'
-# brew 'rbenv'
-# brew 'ruby-build'
 brew 'shellcheck'
 
 
@@ -136,7 +124,7 @@ brew 'tldr'
 # per dir env var loader
 brew 'direnv'
 # brew 'graphviz'
-brew 'pre-commit'
+# brew 'neofetch'
 # brew 'qcachegrind'
 # brew 'equinox/release-tool'
 # brew 'kubernetes-helm'
@@ -146,7 +134,7 @@ cask 'docker'
 cask 'font-hack'
 cask 'sourcetree'
 # brew 'heroku'
-# brew 'tmux'
+brew 'tmux'
 # cask 'dash'
 # cask 'filezilla'
 # cask 'google-cloud-sdk'
@@ -161,15 +149,13 @@ cask 'sourcetree'
 # lifeblood aka productivity and required apps
 #
 
-# cask 'dropbox'
-# cask 'alfred'
-# cask 'bartender'
+cask 'dropbox'
 cask 'bettertouchtool'
 cask 'caffeine'
 cask 'disk-inventory-x'
 cask 'flux'
 # cask 'flycut'
-# cask 'google-chrome'
+cask 'google-chrome'
 # cask 'google-drive'
 # cask 'slack'
 cask 'the-unarchiver'

@@ -6,6 +6,16 @@
       - "{{ python }}"
       - "{{ ruby }}"
 
+- name: Create directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ user_name }}"
+    group: staff
+    recurse: yes
+  with_items:
+    - "{{ anyenv_root }}"
+
 - name: Get anyenv
   git:
     repo: "https://github.com/riywo/anyenv.git"

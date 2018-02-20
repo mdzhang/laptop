@@ -33,7 +33,6 @@ packages:
   - curl
   - lynx          # tui browser
   - git
-  - httpie        # pretty curl/wget
   - jq            # json processor
   - keepassxc     # password manager
   - miller        # csv processor
