@@ -123,6 +123,7 @@ cask 'keepassxc'
 brew 'tldr'
 # per dir env var loader
 brew 'direnv'
+brew 'grv'
 # brew 'graphviz'
 # brew 'neofetch'
 # brew 'qcachegrind'
