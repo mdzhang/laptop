@@ -35,4 +35,4 @@ ruby:
   pkgs:
     - vmail       # vim-based email client
   install_exe: gem
-  install_cmd: install
+  install_cmd: install --user

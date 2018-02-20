@@ -43,6 +43,7 @@ packages:
   - xclip
   - zsh
   - tmux
+  - neofetch
   # ruby packages
   - ruby-dev
   # R packages
