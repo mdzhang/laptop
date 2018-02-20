@@ -6,8 +6,8 @@ golang:
   version: 1.9.4
   pkgs:
     - github.com/motemen/ghq    # for remote repo directory management
-    - github.com/jingweno/ccat
-    - github.com/knqyf263/pet
+    - github.com/jingweno/ccat  # colorized cat
+    - github.com/knqyf263/pet   # snippet manager
   install_exe: go
   install_cmd: get
 
@@ -16,15 +16,16 @@ python:
   vm: pyenv
   version: 3.6.3
   pkgs:
-    - buku  # cli bookmark manager
+    - buku           # cli bookmark manager
     - pre-commit
     - flake8
     - yapf
     - mackup
     - speedtest-cli  # test internet speed
-    - rice  # better R shell
-    - ipython # better python shell
-    - jedi # code completion
+    - rice           # better R shell
+    - ipython        # better python shell
+    - jedi           # code completion
+    - glances        # system info tui
   install_exe: pip3
   install_cmd: install
 
@@ -33,6 +34,6 @@ ruby:
   vm: rbenv
   version: 2.5.0
   pkgs:
-    - vmail       # vim-based email client
+    - vmail          # vim-based email client
   install_exe: gem
   install_cmd: install --user
