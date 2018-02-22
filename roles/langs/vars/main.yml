@@ -40,3 +40,14 @@ ruby:
     - vmail          # vim-based email client
   install_exe: gem
   install_cmd: "install --install-dir $GEM_HOME"
+
+node:
+  name: node
+  vm: nodenv
+  version: 6.11.1
+  pkgs:
+    - yarn
+    - prettier
+    - eslint
+  install_exe: npm
+  install_cmd: "install -g"

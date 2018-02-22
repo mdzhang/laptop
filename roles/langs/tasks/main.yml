@@ -5,6 +5,7 @@
       - "{{ golang }}"
       - "{{ python }}"
       - "{{ ruby }}"
+      - "{{ node }}"
 
 - name: Create directories
   file:
