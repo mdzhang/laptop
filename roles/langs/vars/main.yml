@@ -29,6 +29,7 @@ python:
     - ipython        # better python shell
     - jedi           # code completion
     - glances        # system info tui
+    - neovim         # for vim8/neovim
   install_exe: pip3
   install_cmd: install
 
