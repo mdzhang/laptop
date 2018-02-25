@@ -21,3 +21,8 @@
     remote_src: yes
   args:
     creates: "{{ target_dir }}"
+
+# NB: Add ovpn file to network manager
+#     Automatically connect to VPN
+#     Use NordVPN DNS servers
+#     Constrain to ipv4 to avoid ipv6 leak

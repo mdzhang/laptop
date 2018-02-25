@@ -24,7 +24,6 @@ packages:
   - libsqlite3-dev
   # cli utilities
   - ncdu                  # tui to explore disk space usage
-  - openvpn
   - docker-ce
   - silversearcher-ag
   - bcmwl-kernel-source   # kubuntu wifi fix
@@ -58,7 +57,9 @@ packages:
   - python3-pip
   # applications
   - irssi
+  - openvpn
   - network-manager-openvpn
+  - net-tools
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
