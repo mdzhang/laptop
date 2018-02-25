@@ -12,7 +12,7 @@
     path: "{{ item }}"
     state: directory
     owner: "{{ user_name }}"
-    group: staff
+    group: "{{ group_name }}"
     recurse: yes
   with_items:
     - "{{ anyenv_root }}"

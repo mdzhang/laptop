@@ -55,7 +55,7 @@
     url: "{{ item.url }}"
     dest: "~/.local/bin/{{ item.name }}"
     owner: "{{ user_name }}"
-    group: "{{ user_name }}"
+    group: "{{ group_name }}"
     mode: 0755
   with_items: "{{ remote_executables }}"
   when: not item.url.endswith("tar.gz")

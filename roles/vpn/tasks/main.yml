@@ -9,7 +9,7 @@
     path: "{{ item }}"
     state: directory
     owner: "{{ user_name }}"
-    group: "{{ user_name }}"
+    group: "{{ group_name }}"
     recurse: yes
   with_items:
     - "{{ target_dir }}"

@@ -11,6 +11,7 @@
     ANYENV_ROOT: "{{ anyenv_root }}"
     PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
   roles:
+    - setup
     - { role: macos, when: ansible_os_family == "Darwin" }
     - { role: debian, when: ansible_os_family == "Debian" }
     - { role: langs }

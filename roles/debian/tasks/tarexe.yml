@@ -9,7 +9,7 @@
     path: "{{ dir }}"
     state: directory
     owner: "{{ user_name }}"
-    group: "{{ user_name }}"
+    group: "{{ group_name }}"
     recurse: yes
   loop_control:
     loop_var: dir
@@ -29,5 +29,5 @@
     src: "/tmp/{{ archive_contents.files[0] }}{{ item.name }}"
     dest: "{{ bin_path }}/{{ item.name }}"
     owner: "{{ user_name }}"
-    group: "{{ user_name }}"
+    group: "{{ group_name }}"
     mode: 0755
