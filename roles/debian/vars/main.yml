@@ -58,6 +58,7 @@ packages:
   - python3-pip
   # applications
   - irssi
+  - network-manager-openvpn
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
