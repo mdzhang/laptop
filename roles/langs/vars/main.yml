@@ -28,6 +28,8 @@ python:
     - rice           # better R shell
     - ipython        # better python shell
     - jedi           # code completion
+    - yamllint       # yaml linter
+    - ansible-lint   # ansible yaml linter
     - glances        # system info tui
     - neovim         # for vim8/neovim
     - xkcdpass       # for generating human-memorable passphrases
@@ -51,5 +53,6 @@ node:
     - yarn
     - prettier
     - eslint
+    - jsonlint
   install_exe: npm
   install_cmd: "install -g"
