@@ -60,6 +60,9 @@ packages:
   - openvpn
   - network-manager-openvpn
   - net-tools
+#   - cheese  # webcam
+  # - xournal  # pdf editor
+#   - gimp  # image editor
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
