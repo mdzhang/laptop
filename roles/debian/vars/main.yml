@@ -31,6 +31,7 @@ packages:
   - direnv
   - curl
   - lynx          # tui browser
+  - gdebi         # dependency aware package installer
   - git
   - jq            # json processor
   - keepassxc     # password manager
@@ -60,15 +61,18 @@ packages:
   - openvpn
   - network-manager-openvpn
   - net-tools
-#   - cheese  # webcam
+  # - caffeine
+  # - calibre
+  # - cheese  # webcam
   # - xournal  # pdf editor
-#   - gimp  # image editor
+  # - gimp  # image editor
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
   - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
   - "https://prerelease.keybase.io/keybase_amd64.deb"
   # - "https://download1.rstudio.org/rstudio-xenial-1.1.423-amd64.deb"
+  # - "https://downloads.plex.tv/plex-media-server/1.12.0.4829-6de959918/plexmediaserver_1.12.0.4829-6de959918_amd64.deb"
 
 # Remote executables to install
 # those that end in tar.gz will be unarchived before being moved to bin
