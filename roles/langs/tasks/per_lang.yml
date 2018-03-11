@@ -36,4 +36,3 @@
   shell: "{{ vm }} rehash"
   args:
     executable: "{{ shell_exe }}"
-

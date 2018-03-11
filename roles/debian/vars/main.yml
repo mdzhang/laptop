@@ -62,7 +62,7 @@ packages:
   - network-manager-openvpn
   - net-tools
   # - caffeine
-  # - calibre
+  # - calibre  # ebook manage; TODO: linux installer script needed!
   # - cheese  # webcam
   # - xournal  # pdf editor
   # - gimp  # image editor

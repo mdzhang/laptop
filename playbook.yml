@@ -6,6 +6,7 @@
     local_home: "{{ lookup('env', 'HOME') }}"
     data_dir: "{{ local_home }}/.local/share"
     anyenv_root: "{{ data_dir }}/anyenv"
+    os_family: "{{ ansible_os_family | lower }}"
   environment:
     GEM_HOME: "{{ data_dir }}/gem"
     ANYENV_ROOT: "{{ anyenv_root }}"

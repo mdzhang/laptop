@@ -1,0 +1,20 @@
+- set_fact:
+    basher_exe: "{{ local_home }}/.basher/bin/basher"
+
+- name: Get basher
+  git:
+    repo: "https://github.com/basherpm/basher.git"
+    dest: "{{ local_home }}/.basher"
+    clone: yes
+    update: no
+
+- name: Eval basher init
+  shell: 'eval "$({{ basher_exe}} init -)"'
+  args:
+    executable: "{{ shell_exe }}"
+
+- name: Install packages
+  shell: "{{ basher_exe }} install {{ pkg }}"
+  loop_control:
+    loop_var: pkg
+  with_items: "{{ bash[os_family]['pkgs'] }}"

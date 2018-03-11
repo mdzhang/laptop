@@ -39,3 +39,5 @@
     loop_var: lang
   with_items: "{{ langs }}"
 
+- name: Install shell packages
+  include_tasks: bash.yml

@@ -56,3 +56,8 @@ node:
     - jsonlint
   install_exe: npm
   install_cmd: "install -g"
+
+bash:
+  debian:
+    pkgs:
+      - github.com/mdzhang/killswitch
