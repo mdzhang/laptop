@@ -34,7 +34,6 @@ packages:
   - gdebi         # dependency aware package installer
   - git
   - jq            # json processor
-  - keepassxc     # password manager
   - miller        # csv processor
   - symlinks
   - tree          # pretty directories
@@ -43,6 +42,11 @@ packages:
   - zsh
   - tmux
   - neofetch      # pretty print system info
+  - irssi
+  - openvpn
+  - net-tools
+  - ufw           # firewall configuration
+  # - caffeine
   # ruby packages
   - ruby-dev
   # R packages
@@ -57,11 +61,8 @@ packages:
   - python3-dev
   - python3-pip
   # applications
-  - irssi
-  - openvpn
+  - keepassxc     # password manager
   - network-manager-openvpn
-  - net-tools
-  # - caffeine
   # - calibre  # ebook manage; TODO: linux installer script needed!
   # - cheese  # webcam
   # - xournal  # pdf editor
