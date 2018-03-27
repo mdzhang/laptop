@@ -17,3 +17,4 @@
     - { role: debian, when: ansible_os_family == "Debian" }
     - { role: langs }
     - vpn
+    # TODO: chsh -s zsh; add zsh executable to /etc/shells
