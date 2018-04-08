@@ -22,6 +22,8 @@ packages:
   - libssl-dev
   - sqlite3
   - libsqlite3-dev
+  # - redis-server
+  # - postgresql
   # cli utilities
   - ncdu                  # tui to explore disk space usage
   - docker-ce
@@ -84,3 +86,5 @@ remote_executables:
     name: grv      # git tui
 #   - url: "https://github.com/bcicen/ctop/releases/download/v0.7/ctop-0.7-linux-amd64"
 #     name: ctop
+#   - url: "https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64"
+#     name: cloud_sql_proxy
