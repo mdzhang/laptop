@@ -76,10 +76,11 @@ packages:
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
-  - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
-  - "https://prerelease.keybase.io/keybase_amd64.deb"
+  # - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
+  # - "https://prerelease.keybase.io/keybase_amd64.deb"
   # - "https://download1.rstudio.org/rstudio-xenial-1.1.423-amd64.deb"
   # - "https://downloads.plex.tv/plex-media-server/1.12.0.4829-6de959918/plexmediaserver_1.12.0.4829-6de959918_amd64.deb"
+  # - "https://download.virtualbox.org/virtualbox/5.2.8/virtualbox-5.2_5.2.8-121009~Ubuntu~zesty_amd64.deb"
 
 # Remote executables to install
 # those that end in tar.gz will be unarchived before being moved to bin
@@ -92,3 +93,9 @@ remote_executables:
 #     name: ctop
 #   - url: "https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64"
 #     name: cloud_sql_proxy
+#   - url: "https://storage.googleapis.com/minikube/releases/v0.25.2/minikube-linux-amd64"
+#     name: minikube
+#   - url: "https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz"
+#     name: helm
+#   - url: "https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Linux-x86_64"
+#     name: docker-compose
