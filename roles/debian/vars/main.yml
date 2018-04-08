@@ -5,9 +5,11 @@ repositories:
     - "ppa:marutter/rrutter"
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
+    - "deb http://packages.cloud.google.com/apt cloud-sdk-artful main"
   key:
     - url: "https://download.docker.com/linux/ubuntu/gpg"
       id: 0EBFCD88
+    - url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
 
 # Packages from the default Ubuntu or above sources
 packages:
@@ -48,6 +50,8 @@ packages:
   - openvpn
   - net-tools
   - ufw           # firewall configuration
+  # - google-cloud-sdk
+  # - kubectl
   # - caffeine
   # ruby packages
   - ruby-dev

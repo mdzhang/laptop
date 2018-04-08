@@ -18,6 +18,15 @@
     state: present
   with_items: "{{ repositories.key }}"
   become: true
+  when: item.url is defined and item.id is defined
+
+- name: Add keys
+  apt_key:
+    url: "{{ item.url }}"
+    state: present
+  with_items: "{{ repositories.key }}"
+  become: true
+  when: item.url is defined and item.id is undefined
 
 - name: Add PPAs
   apt_repository:
