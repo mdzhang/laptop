@@ -20,6 +20,7 @@ brew 'gnu-sed', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
 brew 'openssl'
 brew 'readline'
+brew 'ncdu'
 
 # brew 'newsboat'
 # brew 'irssi'
