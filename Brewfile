@@ -39,7 +39,7 @@ brew 'wget'
 brew 'stow'
 
 # jump between common dirs/files
-brew 'z'
+brew 'fasd'
 
 # corrects previous shell command
 brew 'thefuck'

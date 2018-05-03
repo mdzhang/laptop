@@ -34,3 +34,4 @@
   shell: 'brew cleanup && brew cask cleanup'
 
 # TODO: use iTerm and change profile command to use /usr/local/bin/zsh
+#       use iTerm color profile from https://github.com/arcticicestudio/nord-iterm2
