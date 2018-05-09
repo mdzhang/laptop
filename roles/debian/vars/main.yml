@@ -27,6 +27,7 @@ packages:
   # - redis-server
   # - postgresql
   # cli utilities
+  - fasd          # jump quickly between frequently used dirs
   - ncdu                  # tui to explore disk space usage
   - docker-ce
   - silversearcher-ag
