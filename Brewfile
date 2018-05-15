@@ -35,6 +35,9 @@ brew 'wget'
 # convenience cli utilities
 #
 
+# cat with syntax highlighting
+brew 'cat'
+
 # symlink farm manager for dotfiles
 brew 'stow'
 
