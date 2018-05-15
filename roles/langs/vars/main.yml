@@ -6,7 +6,6 @@ golang:
   version: 1.9.4
   pkgs:
     - github.com/motemen/ghq    # for remote repo directory management
-    - github.com/jingweno/ccat  # colorized cat
     - github.com/knqyf263/pet   # snippet manager
     - github.com/gokcehan/lf    # file manager
     - github.com/tomnomnom/gron # json reformatting for grep
