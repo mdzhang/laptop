@@ -78,6 +78,8 @@ brew 'ctags'
 # code searching tool
 brew 'the_silver_searcher'
 
+# GH flavored markdown preview
+brew 'grip'
 
 #
 # programming languages (env + dep management, linting)

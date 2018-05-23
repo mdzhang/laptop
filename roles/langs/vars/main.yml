@@ -24,6 +24,7 @@ python:
     - pre-commit
     - flake8
     - yapf
+    - grip           # GH flavored markdown preview
     - mackup
     - speedtest-cli  # test internet speed
     - rice           # better R shell
