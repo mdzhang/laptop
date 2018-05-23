@@ -80,6 +80,9 @@ brew 'the_silver_searcher'
 
 # GH flavored markdown preview
 brew 'grip'
+# lint english prose
+brew 'proselint'
+brew 'redpen'
 
 #
 # programming languages (env + dep management, linting)

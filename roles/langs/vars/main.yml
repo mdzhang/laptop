@@ -25,6 +25,7 @@ python:
     - flake8
     - yapf
     - grip           # GH flavored markdown preview
+    - proselint      # linting english prose
     - mackup
     - speedtest-cli  # test internet speed
     - rice           # better R shell
@@ -56,6 +57,7 @@ node:
     - prettier
     - eslint
     - jsonlint
+    - write-good
   install_exe: npm
   install_cmd: "install -g"
 
