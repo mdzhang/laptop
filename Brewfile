@@ -143,6 +143,8 @@ brew 'grv'
 # brew 'socat' # for k8s, kid
 cask 'docker'
 cask 'font-hack'
+# favorite font; use the nerd font for devicon/glyph support
+cask 'font-hack-nerd-font'
 cask 'sourcetree'
 # brew 'heroku'
 brew 'tmux'
