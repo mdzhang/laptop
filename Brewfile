@@ -44,6 +44,9 @@ brew 'stow'
 # jump between common dirs/files
 brew 'fasd'
 
+# better find
+brew 'fd'
+
 # corrects previous shell command
 brew 'thefuck'
 
