@@ -3,6 +3,7 @@ repositories:
   ppa:
     - "ppa:phoerious/keepassxc"
     - "ppa:marutter/rrutter"
+    - "ppa:alexlarsson/flatpak"
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
     - "deb http://packages.cloud.google.com/apt cloud-sdk-artful main"
@@ -74,6 +75,7 @@ packages:
   # - cheese  # webcam
   # - xournal  # pdf editor
   # - gimp  # image editor
+  - flatpak  # for installing applications
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
