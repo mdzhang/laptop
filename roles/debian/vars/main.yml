@@ -105,3 +105,7 @@ remote_executables:
 #     name: helm
 #   - url: "https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Linux-x86_64"
 #     name: docker-compose
+
+flatpaks:
+  - flathub
+    - de.wolfvollprecht.UberWriter # nice markdown editor
