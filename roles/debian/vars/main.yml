@@ -75,6 +75,8 @@ packages:
   # - cheese  # webcam
   # - xournal  # pdf editor
   # - gimp  # image editor
+  # TODO: at some point after this, run
+  # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   - flatpak  # for installing applications
 
 # Packages to install from remote source, when no PPA is available
