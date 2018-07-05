@@ -178,6 +178,7 @@ cask 'the-unarchiver'
 # appstore 417375580 'BetterSnapTool'
 # set default apps for file types
 brew 'duti'
+cask 'workflowy'
 
 
 #
