@@ -5,6 +5,7 @@
   git:
     repo: "https://github.com/basherpm/basher.git"
     dest: "{{ local_home }}/.basher"
+    version: c58734c
     clone: yes
     update: no
 
