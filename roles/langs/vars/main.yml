@@ -73,4 +73,6 @@ node:
 bash:
   debian:
     pkgs:
-      - github.com/mdzhang/killswitch
+      - github.com/mdzhang/killswitch # vpn kill switch
+      - github.com/mdzhang/pipes      # terminal screensaver
+      - github.com/mdzhang/climate    # utility belt
