@@ -62,6 +62,9 @@ brew 'https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb'
 # pretty list dirs
 brew 'tree'
 
+# pretty ls
+brew 'exa'
+
 cask 'iterm2'
 
 brew 'peco'
