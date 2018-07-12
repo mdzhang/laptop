@@ -16,6 +16,7 @@ repositories:
 packages:
   # base dev tools
   - build-essential
+  - cmake
   - libpq-dev
   - libxml2-dev
   - libxslt1-dev
