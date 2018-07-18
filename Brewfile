@@ -69,6 +69,9 @@ cask 'iterm2'
 
 brew 'peco'
 
+# self-described swiss army knife for mac
+brew 'm-cli'
+
 
 #
 # vim plugin support
