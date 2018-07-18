@@ -176,7 +176,7 @@ cask 'bettertouchtool'
 cask 'caffeine'
 cask 'disk-inventory-x'
 cask 'flux'
-# cask 'flycut'
+cask 'flycut'
 cask 'google-chrome'
 # cask 'google-drive'
 # cask 'slack'
@@ -184,7 +184,6 @@ cask 'the-unarchiver'
 # appstore 417375580 'BetterSnapTool'
 # set default apps for file types
 brew 'duti'
-cask 'workflowy'
 
 
 #
