@@ -24,7 +24,7 @@ brew 'ncdu'
 
 # brew 'newsboat'
 # brew 'irssi'
-brew 'sgeb/mutt/mutt', args: ['with-trash-patch', 'with-sidebar-patch', 'with-gmail-server-search-patch', 'with-gmail-labels-patch', 'with-forwref-patch']
+# brew 'sgeb/mutt/mutt', args: ['with-trash-patch', 'with-sidebar-patch', 'with-gmail-server-search-patch', 'with-gmail-labels-patch', 'with-forwref-patch']
 brew 'nmap'
 brew 'urlview'
 brew 'watch'
