@@ -72,6 +72,12 @@ brew 'peco'
 # self-described swiss army knife for mac
 brew 'm-cli'
 
+# log file navigator
+brew 'lnav'
+
+# (select &) pipe output from cli commands to clipboard
+brew 'yank'
+
 
 #
 # vim plugin support
