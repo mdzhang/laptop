@@ -35,6 +35,9 @@ brew 'wget'
 # convenience cli utilities
 #
 
+# better tui diff
+brew 'icdiff'
+
 # cat with syntax highlighting
 brew 'ccat'
 
