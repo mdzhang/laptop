@@ -177,6 +177,8 @@ brew 'tmux'
 # lifeblood aka productivity and required apps
 #
 
+# hide menubar items
+cask 'vanilla'
 cask 'dropbox'
 cask 'bettertouchtool'
 cask 'caffeine'
