@@ -37,6 +37,7 @@ packages:
   - ctags
   - direnv
   - curl
+  - icdiff        # diff viewer
   - lynx          # tui browser
   - gdebi         # dependency aware package installer
   - git
@@ -53,6 +54,7 @@ packages:
   - openvpn
   - net-tools
   - ufw           # firewall configuration
+  - yank
   # - google-cloud-sdk
   # - kubectl
   # - caffeine
