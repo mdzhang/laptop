@@ -36,6 +36,7 @@ python:
     - glances        # system info tui
     - neovim         # for vim8/neovim
     - xkcdpass       # for generating human-memorable passphrases
+    - sudocabulary   # prints vocab words at top of new terminal sessions
   install_exe: pip3
   install_cmd: install
 
