@@ -82,3 +82,4 @@ bash:
       - github.com/mdzhang/killswitch # vpn kill switch
       - github.com/mdzhang/pipes      # terminal screensaver
       - github.com/mdzhang/climate    # utility belt
+      - github.com/mdzhang/magoosh-vocab  # print GRE vocab on shell startup
