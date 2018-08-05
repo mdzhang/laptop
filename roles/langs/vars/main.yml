@@ -59,6 +59,7 @@ node:
     - eslint
     - jsonlint
     - write-good
+    - markdownlint-cli
   install_exe: npm
   install_cmd: "install -g"
 
