@@ -45,7 +45,7 @@ brew 'ccat'
 brew 'stow'
 
 # jump between common dirs/files
-brew 'fasd'
+brew 'z'
 
 # better find
 brew 'fd'
