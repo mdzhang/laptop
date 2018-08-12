@@ -24,10 +24,20 @@
     list_files: yes
   register: archive_contents
 
-- name: Copy to bin
+- name: Copy tar.gz output to bin
   copy:
     src: "/tmp/{{ archive_contents.files[0] }}{{ item.name }}"
     dest: "{{ bin_path }}/{{ item.name }}"
     owner: "{{ user_name }}"
     group: "{{ group_name }}"
     mode: 0755
+  when: item.url.endswith("tar.gz")
+
+- name: Copy tgz output to bin
+  copy:
+    src: "/tmp/{{ item.name }}"
+    dest: "{{ bin_path }}/{{ item.name }}"
+    owner: "{{ user_name }}"
+    group: "{{ group_name }}"
+    mode: 0755
+  when: item.url.endswith("tgz")

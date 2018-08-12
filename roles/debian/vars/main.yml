@@ -46,6 +46,7 @@ packages:
   - tree          # pretty directories
   - vim-gtk
   - xclip
+  # - fish
   - zsh
   - tmux
   - neofetch      # pretty print system info
@@ -93,6 +94,8 @@ remote_packages:
 # Remote executables to install
 # those that end in tar.gz will be unarchived before being moved to bin
 remote_executables:
+  - url: "https://github.com/junegunn/fzf-bin/releases/download/0.17.4/fzf-0.17.4-linux_amd64.tgz"
+    name: fzf
   - url: "https://github.com/peco/peco/releases/download/v0.5.2/peco_linux_amd64.tar.gz"
     name: peco     # interactive cli filtering
   - url: "https://github.com/rgburke/grv/releases/download/v0.1.2/grv_v0.1.2_linux64"

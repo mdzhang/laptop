@@ -2,7 +2,7 @@
 # Install lang and packages with anyenv
 
 - set_fact:
-    vm: 'eval "$(anyenv init -)" && {{ lang.vm }}'
+    vm: 'eval "$(anyenv init -)"; {{ lang.vm }}'
     exe: "{{ anyenv_root }}/envs/{{ lang.vm }}/versions/{{ lang.version}}/bin/{{ lang.install_exe }}"
 
 - name: "Check if {{ lang.name }} {{ lang.version }} is installed"
