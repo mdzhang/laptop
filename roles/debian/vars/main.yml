@@ -4,6 +4,7 @@ repositories:
     - "ppa:phoerious/keepassxc"
     - "ppa:marutter/rrutter"
     - "ppa:alexlarsson/flatpak"
+    - "ppa:fish-shell/release-2"
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
     - "deb http://packages.cloud.google.com/apt cloud-sdk-artful main"
