@@ -14,6 +14,7 @@ brew 'git'
 # TODO: had to /usr/local/Cellar/python3/3.6.4_2/bin/pip3 install neovim jedi
 brew 'vim', args: ['with-override-system-vi', 'with-python3']
 brew 'zsh'
+# brew 'fish'
 
 brew 'findutils', args: ['with-default-names']
 brew 'gnu-sed', args: ['with-default-names']
@@ -108,8 +109,6 @@ brew 'redpen'
 
 
 # brew 'glide'
-brew 'node-build'
-brew 'nodenv'
 brew 'pyenv-virtualenv'
 # cask 'r-app'
 # cask 'rstudio'
@@ -136,7 +135,6 @@ brew 'sqlite'
 #
 
 
-cask '1password'
 brew 'gpg'
 cask 'keepassxc'
 # cask 'keybase'
