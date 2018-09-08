@@ -70,6 +70,7 @@ brew 'tree'
 brew 'exa'
 
 cask 'iterm2'
+cask 'kitty'
 
 brew 'peco'
 
