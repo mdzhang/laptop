@@ -20,9 +20,11 @@
     dest: "{{ target_dir }}"
     remote_src: yes
   args:
-    creates: "{{ target_dir }}"
+    creates:
+      - "{{ target_dir }}/ovpn_tcp"
+      - "{{ target_dir }}/ovpn_udp"
 
 # NB: Add ovpn file to network manager
 #     Automatically connect to VPN
-#     Use NordVPN DNS servers
-#     Constrain to ipv4 to avoid ipv6 leak
+#     Use NordVPN DNS servers (v4: 162.242.211.137, v6: ::ffff:162.242.211.137)
+#     Constrain to ipv4 to avoid ipv6 leak (ignore ipv6 under network manager settings)
