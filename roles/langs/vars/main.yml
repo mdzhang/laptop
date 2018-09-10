@@ -73,6 +73,7 @@ node:
 #   version:
 #   pkgs:
 #     - exa
+#     - "--git https://github.com/jwilm/alacritty"
 #   install_exe: cargo
 #   install_cmd: install
 

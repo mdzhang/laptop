@@ -110,6 +110,7 @@ brew 'redpen'
 
 
 # brew 'glide'
+# brew 'rustup-init'
 brew 'pyenv-virtualenv'
 # cask 'r-app'
 # cask 'rstudio'
