@@ -101,6 +101,8 @@ remote_executables:
     name: peco     # interactive cli filtering
   - url: "https://github.com/rgburke/grv/releases/download/v0.1.2/grv_v0.1.2_linux64"
     name: grv      # git tui
+    # TODO: creates bin64 dir that should be put on path
+#   - url: "https://xpdfreader-dl.s3.amazonaws.com/xpdf-tools-linux-4.00.tar.gz"
 #   - url: "https://github.com/bcicen/ctop/releases/download/v0.7/ctop-0.7-linux-amd64"
 #     name: ctop
 #   - url: "https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64"
@@ -113,5 +115,5 @@ remote_executables:
 #     name: docker-compose
 
 flatpaks:
-  - flathub
-    - de.wolfvollprecht.UberWriter # nice markdown editor
+  - de.wolfvollprecht.UberWriter # nice markdown editor
+  - com.getpostman.Postman
