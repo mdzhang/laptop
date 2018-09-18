@@ -69,7 +69,7 @@ brew 'tree'
 # pretty ls
 brew 'exa'
 
-cask 'iterm2'
+# Terminal alternative
 cask 'kitty'
 
 brew 'peco'
