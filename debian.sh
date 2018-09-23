@@ -3,6 +3,7 @@
 
 # Manual steps
 # - Grab Firefox KeePassXC-Connector extension
+#   - Setup Firefox HTTP proxy: https://nordvpn.com/tutorials/proxy-setup/firefox/
 # - Login to Dropbox, Gmail, Firefox, Github
 # - Generate SSH key, add to Github
 # - Git clone dotfiles, do recursive install
