@@ -3,6 +3,7 @@ tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'sgeb/mutt'
 tap 'eqnxio/equinox'
+tap 'johanhaleby/kubetail'
 
 #
 # override old, shitty, or missing system defaults
@@ -158,6 +159,7 @@ brew 'grv'
 # brew 'equinox/release-tool'
 # brew 'kubernetes-helm'
 # brew 'kubernetes-cli'
+# brew 'kubetail', args: ['with-short-names']
 # brew 'socat' # for k8s, kid
 cask 'docker'
 cask 'font-hack'
