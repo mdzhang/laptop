@@ -24,6 +24,7 @@ python:
     - pre-commit
     - flake8
     - yapf
+    - yq             # like jq, for yaml
     - grip           # GH flavored markdown preview
     - proselint      # linting english prose
     - mackup
@@ -59,6 +60,7 @@ node:
     - jsonlint
     - write-good
     - markdownlint-cli
+    - ctags          # better Javascript ctags
   install_exe: npm
   install_cmd: "install -g"
 
