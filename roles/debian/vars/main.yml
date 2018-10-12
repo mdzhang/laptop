@@ -5,6 +5,7 @@ repositories:
     - "ppa:marutter/rrutter"
     - "ppa:alexlarsson/flatpak"
     - "ppa:fish-shell/release-2"
+    # https://github.com/ChrisRM/material-theme-jetbrains ftw
     # - "ppa:mmk2410/intellij-idea"
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
