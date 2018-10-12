@@ -78,6 +78,7 @@ node:
 # TODO: have to
 #   jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/
 #   after brew cask install java8
+#   jenv add /usr/lib/jvm/java-8-openjdk-amd64
 # java:
 #   name: java
 #   vm: jenv

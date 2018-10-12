@@ -84,7 +84,8 @@ packages:
   # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   - flatpak  # for installing applications
   # - filelight # disk usage analyzer
-  # intellij-idea-community
+  # - intellij-idea-community
+  # - openjdk-8-jre
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
