@@ -122,3 +122,4 @@ remote_executables:
 flatpaks:
   - de.wolfvollprecht.UberWriter # nice markdown editor
   - com.getpostman.Postman
+  - com.axosoft.GitKraken
