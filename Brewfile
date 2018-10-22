@@ -20,6 +20,7 @@ brew 'zsh'
 brew 'findutils', args: ['with-default-names']
 brew 'gnu-sed', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
+# brew 'libtool', args: ['with-default-names']
 brew 'openssl'
 brew 'readline'
 brew 'ncdu'
@@ -123,9 +124,9 @@ brew 'shellcheck'
 #
 
 
-# brew 'mysql', restart_service: true
+brew 'mysql', restart_service: true
 brew 'postgresql', restart_service: true
-# brew 'redis', restart_service: true
+brew 'redis', restart_service: true
 brew 'sqlite'
 
 # cask 'psequel'
@@ -172,7 +173,7 @@ brew 'tmux'
 # cask 'filezilla'
 # cask 'google-cloud-sdk'
 # cask 'ngrok'
-# cask 'postman'
+cask 'postman'
 # cask 'vagrant-manager'
 # cask 'virtualbox'
 # cask 'xquartz'
