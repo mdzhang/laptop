@@ -3,7 +3,7 @@ shell_exe: /bin/bash
 golang:
   name: go
   vm: goenv
-  version: 1.9.4
+  version: 1.10.0
   pkgs:
     - github.com/motemen/ghq    # for remote repo directory management
     - github.com/knqyf263/pet   # snippet manager
@@ -14,10 +14,11 @@ golang:
 
 # TODO: This freaks out if ~/.local/bin or ~/.local/lib
 #       are on path and already have packages
+# TODO: use Hombrew readline/openssl to install python
 python:
   name: python
   vm: pyenv
-  version: 3.6.3
+  version: 3.7.0
   pkgs:
     - httpie         # pretty curl/wget
     - buku           # cli bookmark manager
@@ -43,7 +44,7 @@ python:
 ruby:
   name: ruby
   vm: rbenv
-  version: 2.5.0
+  version: 2.5.3
   pkgs:
     - vmail          # vim-based email client
   install_exe: gem
@@ -52,7 +53,7 @@ ruby:
 node:
   name: node
   vm: nodenv
-  version: 6.11.1
+  version: 9.11.2
   pkgs:
     - yarn
     - prettier
@@ -90,7 +91,6 @@ node:
 #   pkgs:
 #     - exa
 #     - ripgrep
-#     - "--git https://github.com/jwilm/alacritty"
 #   install_exe: cargo
 #   install_cmd: install
 
