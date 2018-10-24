@@ -172,6 +172,7 @@ brew 'tmux'
 # cask 'dash'
 # cask 'filezilla'
 # cask 'google-cloud-sdk'
+# brew 'awscli'
 # cask 'ngrok'
 cask 'postman'
 # cask 'vagrant-manager'
@@ -198,6 +199,8 @@ cask 'the-unarchiver'
 # appstore 417375580 'BetterSnapTool'
 # set default apps for file types
 brew 'duti'
+# monitor network traffic
+# cask 'little-snitch'
 
 
 #
