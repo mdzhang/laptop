@@ -9,6 +9,7 @@ golang:
     - github.com/knqyf263/pet   # snippet manager
     - github.com/gokcehan/lf    # file manager
     - github.com/tomnomnom/gron # json reformatting for grep
+    - github.com/akavel/up
   install_exe: go
   install_cmd: get
 
