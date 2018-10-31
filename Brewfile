@@ -93,6 +93,7 @@ brew 'yank'
 
 # for vim search
 brew 'ack'
+brew 'fzf'
 
 # for vim tagbar plugin
 brew 'ctags'
