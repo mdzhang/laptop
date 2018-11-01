@@ -111,7 +111,8 @@ brew 'redpen'
 # programming languages (env + dep management, linting)
 #
 
-
+# brew 'ghc'
+# brew 'haskell-stack'
 # brew 'glide'
 # brew 'rustup-init'
 brew 'pyenv-virtualenv'
@@ -131,6 +132,7 @@ brew 'redis', restart_service: true
 brew 'sqlite'
 
 # cask 'psequel'
+# cask 'pgadmin3'
 # cask 'sequel-pro'
 # cask 'sqlitebrowser'
 
@@ -144,6 +146,8 @@ brew 'gpg'
 cask 'keepassxc'
 # cask 'keybase'
 # cask 'nordvpn'
+# brew 'wireshark'
+# brew 'sslsplit'
 
 
 #
@@ -180,6 +184,8 @@ cask 'postman'
 # cask 'vagrant-manager'
 # cask 'virtualbox'
 # cask 'xquartz'
+# cask 'anaconda2'
+# cask 'openrefine'
 
 
 #
