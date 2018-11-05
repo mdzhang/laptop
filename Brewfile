@@ -17,6 +17,7 @@ brew 'vim', args: ['with-override-system-vi', 'with-python3']
 brew 'zsh'
 # brew 'fish'
 
+brew 'coreutils'
 brew 'findutils', args: ['with-default-names']
 brew 'gnu-sed', args: ['with-default-names']
 brew 'grep', args: ['with-default-names']
@@ -61,6 +62,8 @@ brew 'miller'
 
 # json processor
 brew 'jq'
+# create json outputs from shell
+brew 'jo'
 
 # cli tool for previewing css selector output
 brew 'https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb'
@@ -148,6 +151,7 @@ cask 'keepassxc'
 # cask 'nordvpn'
 # brew 'wireshark'
 # brew 'sslsplit'
+# brew 'tcptrace'
 
 
 #
@@ -186,6 +190,7 @@ cask 'postman'
 # cask 'xquartz'
 # cask 'anaconda2'
 # cask 'openrefine'
+# cask 'mactex'
 
 
 #
