@@ -7,6 +7,7 @@ repositories:
     - "ppa:fish-shell/release-2"
     # https://github.com/ChrisRM/material-theme-jetbrains ftw
     # - "ppa:mmk2410/intellij-idea"
+    - "ppa:linrunner/tlp"
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
     - "deb http://packages.cloud.google.com/apt cloud-sdk-artful main"
@@ -88,6 +89,10 @@ packages:
   # - intellij-idea-community
   # - openjdk-8-jre
   # - zeal  # offline docs viewer
+  # for improving battery consumption
+  - powertop
+  - tlp
+  - tlp-rdw
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
