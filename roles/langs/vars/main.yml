@@ -39,6 +39,7 @@ python:
     - glances        # system info tui
     - neovim         # for vim8/neovim
     - xkcdpass       # for generating human-memorable passphrases
+    - sqlparse       # for sqlformat
   install_exe: pip3
   install_cmd: install
 
@@ -48,6 +49,7 @@ ruby:
   version: 2.5.3
   pkgs:
     - vmail          # vim-based email client
+    - sqlint
   install_exe: gem
   install_cmd: "install --install-dir $GEM_HOME"
 

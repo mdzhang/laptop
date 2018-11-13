@@ -17,6 +17,8 @@ brew 'vim', args: ['with-override-system-vi', 'with-python3']
 brew 'zsh'
 # brew 'fish'
 
+# brew "binutils"
+# brew "diffutils"
 brew 'coreutils'
 brew 'findutils', args: ['with-default-names']
 brew 'gnu-sed', args: ['with-default-names']
@@ -88,6 +90,8 @@ brew 'lnav'
 # (select &) pipe output from cli commands to clipboard
 brew 'yank'
 
+# prefix cli commands to get a notification when done
+brew 'noti'
 
 #
 # vim plugin support
@@ -183,6 +187,7 @@ brew 'tmux'
 # cask 'google-cloud-sdk'
 # brew 'awscli'
 # brew 'terraform'
+# brew 'packer'
 # cask 'ngrok'
 cask 'postman'
 # cask 'vagrant-manager'
