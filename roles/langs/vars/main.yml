@@ -50,6 +50,7 @@ ruby:
   pkgs:
     - vmail          # vim-based email client
     - sqlint
+    - tmuxinator
   install_exe: gem
   install_cmd: "install --install-dir $GEM_HOME"
 
