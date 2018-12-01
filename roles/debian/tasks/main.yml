@@ -28,6 +28,15 @@
   become: true
   when: item.url is defined and item.id is undefined
 
+- name: Add keys
+  apt_key:
+    keyserver: "{{ item.keyserver }}"
+    id: "{{ item.id }}"
+    state: present
+  with_items: "{{ repositories.key }}"
+  become: true
+  when: item.keyserver is defined
+
 - name: Add PPAs
   apt_repository:
     repo: "{{ item }}"

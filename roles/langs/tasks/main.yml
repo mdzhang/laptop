@@ -30,6 +30,11 @@
   args:
     executable: "{{ shell_exe }}"
 
+- name: Instally anyenv-update plugin
+  shell: 'mkdir -p $(anyenv root)/plugins && git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update'
+  args:
+    executable: "{{ shell_exe }}"
+
 - name: Install envs
   shell: "anyenv install -s {{ item.vm }}"
   with_items: "{{ langs }}"

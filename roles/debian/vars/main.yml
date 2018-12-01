@@ -8,13 +8,17 @@ repositories:
     # https://github.com/ChrisRM/material-theme-jetbrains ftw
     # - "ppa:mmk2410/intellij-idea"
     - "ppa:linrunner/tlp"
+    # - "ppa:kip/pidgin"
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
     - "deb http://packages.cloud.google.com/apt cloud-sdk-artful main"
+    # - "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
   key:
     - url: "https://download.docker.com/linux/ubuntu/gpg"
       id: 0EBFCD88
     - url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
+    # - keyserver: "keyserver.ubuntu.com"
+    #   key: E084DAB9
 
 # Packages from the default Ubuntu or above sources
 packages:
@@ -67,9 +71,6 @@ packages:
   # R packages
   # - r-base
   # - r-base-dev
-  # - r-cran-tidyr
-  # - r-cran-dplyr
-  # - r-cran-ggplot2
   # python packages
   - python-setuptools
   - python3
@@ -93,6 +94,7 @@ packages:
   - powertop
   - tlp
   - tlp-rdw
+  - pidgin
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
