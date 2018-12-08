@@ -19,7 +19,7 @@
 # - Show hidden files in file explorer
 
 sudo apt-get -y install \
-  python-setuptools python3 python3-dev python3-pip build-essential libpq-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev git
+  python3-setuptools python3 python3-wheel python3-dev python3-pip build-essential libpq-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev git
 
 pip3 install ansible --user
 
@@ -33,6 +33,7 @@ if [ ! -d $installdir ]; then
     exit 1
 else
     cd $installdir
+    export PATH=$PATH:~/.local/bin
     make run
 fi
 

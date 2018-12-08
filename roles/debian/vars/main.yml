@@ -13,12 +13,16 @@ repositories:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
     - "deb http://packages.cloud.google.com/apt cloud-sdk-artful main"
     # - "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
+    - "deb http://http.us.debian.org/debian buster main"
   key:
     - url: "https://download.docker.com/linux/ubuntu/gpg"
       id: 0EBFCD88
     - url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
     # - keyserver: "keyserver.ubuntu.com"
-    #   key: E084DAB9
+    #   id: E084DAB9
+    # for buster/kitty
+    - keyserver: "keyserver.ubuntu.com"
+      id: 8B48AD6246925553
 
 # Packages from the default Ubuntu or above sources
 packages:
@@ -32,6 +36,7 @@ packages:
   - libsasl2-dev
   - libffi-dev
   - libssl-dev
+  - libreadline-dev
   - sqlite3
   - libsqlite3-dev
   # - redis-server
@@ -63,14 +68,16 @@ packages:
   - net-tools
   - ufw           # firewall configuration
   - yank
+  - stow
+  - kitty         # GPU terminal
   # - google-cloud-sdk
   # - kubectl
   # - caffeine
   # ruby packages
   - ruby-dev
   # R packages
-  # - r-base
-  # - r-base-dev
+  - r-base
+  - r-base-dev
   # python packages
   - python-setuptools
   - python3
@@ -84,7 +91,7 @@ packages:
   # - xournal  # pdf editor
   # - gimp  # image editor
   # TODO: at some point after this, run
-  # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  #   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   - flatpak  # for installing applications
   # - filelight # disk usage analyzer
   # - intellij-idea-community
@@ -95,11 +102,12 @@ packages:
   - tlp
   - tlp-rdw
   - pidgin
+  - parcellite  # clipboard history
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
   - "https://github.com/sharkdp/bat/releases/download/v0.3.0/bat-musl_0.3.0_amd64.deb"
-  # - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
+  - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2018.11.28_amd64.deb"
   # - "https://prerelease.keybase.io/keybase_amd64.deb"
   # - "https://download1.rstudio.org/rstudio-xenial-1.1.423-amd64.deb"
   # - "https://downloads.plex.tv/plex-media-server/1.12.0.4829-6de959918/plexmediaserver_1.12.0.4829-6de959918_amd64.deb"
@@ -124,10 +132,8 @@ remote_executables:
 #     name: minikube
 #   - url: "https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz"
 #     name: helm
-#   - url: "https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Linux-x86_64"
-#     name: docker-compose
+  - url: "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Linux-x86_64"
+    name: docker-compose
 
 flatpaks:
-  - de.wolfvollprecht.UberWriter # nice markdown editor
   - com.getpostman.Postman
-  - com.axosoft.GitKraken

@@ -6,13 +6,11 @@
 
 - name: Create directories
   file:
-    path: "{{ item }}"
+    path: "{{ target_dir }}"
     state: directory
     owner: "{{ user_name }}"
     group: "{{ group_name }}"
     recurse: yes
-  with_items:
-    - "{{ target_dir }}"
 
 - name: Grab Nordvpn ovpn files
   unarchive:
@@ -20,9 +18,7 @@
     dest: "{{ target_dir }}"
     remote_src: yes
   args:
-    creates:
-      - "{{ target_dir }}/ovpn_tcp"
-      - "{{ target_dir }}/ovpn_udp"
+    creates: "{{ target_dir }}/ovpn_tcp"
 
 # NB: Add ovpn file to network manager
 #     Automatically connect to VPN

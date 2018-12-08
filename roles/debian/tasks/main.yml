@@ -11,7 +11,7 @@
     update_cache: yes
   become: true
 
-- name: Add keys
+- name: Add keys w/ url and id
   apt_key:
     url: "{{ item.url }}"
     id: "{{ item.id }}"
@@ -20,7 +20,7 @@
   become: true
   when: item.url is defined and item.id is defined
 
-- name: Add keys
+- name: Add keys w/ url and no id
   apt_key:
     url: "{{ item.url }}"
     state: present
@@ -28,19 +28,21 @@
   become: true
   when: item.url is defined and item.id is undefined
 
-- name: Add keys
+- name: Add keys w/ keyserver and id
   apt_key:
     keyserver: "{{ item.keyserver }}"
     id: "{{ item.id }}"
     state: present
   with_items: "{{ repositories.key }}"
   become: true
-  when: item.keyserver is defined
+  when: item.keyserver is defined and item.id is defined
 
 - name: Add PPAs
   apt_repository:
     repo: "{{ item }}"
     state: present
+    # TODO: don't hard code 'bionic'
+    codename: "{{ ansible_distribution == "Linux Mint" | ternary('bionic', ansible_os_family) }}"
   with_items: "{{ repositories.ppa }}"
   become: true
 
@@ -53,9 +55,8 @@
 
 - name: Install packages
   apt:
-    name: "{{ item }}"
+    name: "{{ packages }}"
     state: present
-  with_items: "{{ packages }}"
   become: true
 
 - name: Install remote packages
@@ -86,4 +87,13 @@
 - name: Remove dependencies that are no longer required
   apt:
     autoremove: yes
+  become: true
+
+- name: Add flatpak hub
+  shell: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  become: true
+
+- name: Install flatpaks
+  shell: flatpak install -y flathub "{{ item }}"
+  with_items: "{{ flatpaks }}"
   become: true

@@ -1,3 +1,4 @@
+---
 shell_exe: /bin/bash
 
 golang:
@@ -5,17 +6,17 @@ golang:
   vm: goenv
   version: 1.10.0
   pkgs:
-    - github.com/motemen/ghq    # for remote repo directory management
-    - github.com/knqyf263/pet   # snippet manager
-    - github.com/gokcehan/lf    # file manager
-    - github.com/tomnomnom/gron # json reformatting for grep
+    - github.com/motemen/ghq     # for remote repo directory management
+    - github.com/knqyf263/pet    # snippet manager
+    - github.com/gokcehan/lf     # file manager
+    - github.com/tomnomnom/gron  # json reformatting for grep
     - github.com/akavel/up
   install_exe: go
   install_cmd: get
 
 # TODO: This freaks out if ~/.local/bin or ~/.local/lib
 #       are on path and already have packages
-# TODO: use Hombrew readline/openssl to install python
+# TODO: use Homebrew readline/openssl to install python
 python:
   name: python
   vm: pyenv
@@ -89,15 +90,13 @@ node:
 #   name: java
 #   vm: jenv
 
-# rust:
-#   name: rust
-#   vm: rustup
-#   version:
-#   pkgs:
-#     - exa
-#     - ripgrep
-#   install_exe: cargo
-#   install_cmd: install
+rust:
+  name: rust
+  pkgs:
+    - exa
+    - ripgrep
+  install_exe: cargo
+  install_cmd: install
 
 # php:
 #   name: php
@@ -107,7 +106,7 @@ node:
 bash:
   debian:
     pkgs:
-      - github.com/mdzhang/killswitch # vpn kill switch
-      - github.com/mdzhang/pipes      # terminal screensaver
-      - github.com/mdzhang/climate    # utility belt
+      - github.com/mdzhang/killswitch  # vpn kill switch
+      - github.com/mdzhang/pipes       # terminal screensaver
+      - github.com/mdzhang/climate     # utility belt
       - github.com/mdzhang/magoosh-vocab  # print GRE vocab on shell startup
