@@ -1,0 +1,26 @@
+---
+
+- name: Create user font dir
+  file:
+    path: ~/.local/share/fonts
+    state: directory
+    owner: "{{ user_name }}"
+    group: "{{ group_name }}"
+
+- name: See what fonts are installed
+  become: true
+  become_user: "{{ user_name }}"
+  shell: "fc-list"
+  register: font_check
+
+- name: Download font
+  unarchive:
+    src: "{{ item['url'] }}"
+    dest: ~/.local/share/fonts
+    remote_src: true
+  with_items: "{{ fonts }}"
+  when: "item['name'] not in font_check.stdout"
+
+- name: Reload font cache
+  shell: "fc-cache -f -v"
+  when: "fonts | map(attribute='name') | select('in', font_check.stdout) | list is not any"

@@ -8,7 +8,7 @@
 
 - name: apt-get update
   apt:
-    update_cache: yes
+    update_cache: true
   become: true
 
 - name: Add keys w/ url and id
@@ -42,7 +42,7 @@
     repo: "{{ item }}"
     state: present
     # TODO: don't hard code 'bionic'
-    codename: "{{ ansible_distribution == "Linux Mint" | ternary('bionic', ansible_os_family) }}"
+    codename: "{{ ansible_distribution == 'Linux Mint' | ternary('bionic', ansible_os_family) }}"
   with_items: "{{ repositories.ppa }}"
   become: true
 
@@ -81,12 +81,12 @@
 
 - name: Remove useless packages from the cache
   apt:
-    autoclean: yes
+    autoclean: true
   become: true
 
 - name: Remove dependencies that are no longer required
   apt:
-    autoremove: yes
+    autoremove: true
   become: true
 
 - name: Add flatpak hub
@@ -97,3 +97,5 @@
   shell: flatpak install -y flathub "{{ item }}"
   with_items: "{{ flatpaks }}"
   become: true
+
+- include_tasks: fonts.yml

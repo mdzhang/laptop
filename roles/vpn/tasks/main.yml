@@ -10,13 +10,13 @@
     state: directory
     owner: "{{ user_name }}"
     group: "{{ group_name }}"
-    recurse: yes
+    recurse: true
 
 - name: Grab Nordvpn ovpn files
   unarchive:
     src: https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip
     dest: "{{ target_dir }}"
-    remote_src: yes
+    remote_src: true
   args:
     creates: "{{ target_dir }}/ovpn_tcp"
 
