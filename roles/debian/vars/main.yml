@@ -37,6 +37,8 @@ packages:
   - libffi-dev
   - libssl-dev
   - libreadline-dev
+  # required for R
+  - libcurl4-openssl-dev
   - sqlite3
   - libsqlite3-dev
   # - redis-server

@@ -110,3 +110,5 @@ bash:
       - github.com/mdzhang/pipes       # terminal screensaver
       - github.com/mdzhang/climate     # utility belt
       - github.com/mdzhang/magoosh-vocab  # print GRE vocab on shell startup
+
+# TODO: considering moving R packages from dotfiles Rprofile
