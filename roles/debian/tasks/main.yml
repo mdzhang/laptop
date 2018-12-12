@@ -99,3 +99,4 @@
   become: true
 
 - include_tasks: fonts.yml
+- include_tasks: power.yml

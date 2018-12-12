@@ -1,0 +1,16 @@
+---
+# B/c Linux has high battery consumption by default
+# combine w/ tlp, tlp-rdw
+
+- name: Create powertop systemd service file
+  copy:
+    src: etc/systemd/system/powertop.service
+    dest: /etc/systemd/system/powertop.service
+    mode: 0744
+  become: true
+
+- name: Start and enable powertop service
+  systemd:
+    name: powertop
+    state: started
+    enabled: true
