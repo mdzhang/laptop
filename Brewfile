@@ -121,7 +121,7 @@ brew 'redpen'
 # brew 'ghc'
 # brew 'haskell-stack'
 # brew 'glide'
-# brew 'rustup-init'
+brew 'rustup-init'
 brew 'pyenv-virtualenv'
 # cask 'r-app'
 # cask 'rstudio'
@@ -139,9 +139,10 @@ brew 'redis', restart_service: true
 brew 'sqlite'
 
 # cask 'psequel'
-# cask 'pgadmin3'
+# cask 'pgadmin4'
 # cask 'sequel-pro'
 # cask 'sqlitebrowser'
+# cask 'dbeaver-community'
 
 
 #
@@ -196,6 +197,7 @@ cask 'postman'
 # cask 'anaconda2'
 # cask 'openrefine'
 # cask 'mactex'
+cask 'tunnelblick'  # FOSS OpenVPN client
 
 
 #
