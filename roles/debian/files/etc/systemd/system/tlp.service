@@ -1,0 +1,11 @@
+[Unit]
+Description=TLP
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/tlp start
+RemainAfterExit=true
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target

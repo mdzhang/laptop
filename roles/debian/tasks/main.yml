@@ -42,7 +42,7 @@
     repo: "{{ item }}"
     state: present
     # TODO: don't hard code 'bionic'
-    codename: "{{ ansible_distribution == 'Linux Mint' | ternary('bionic', ansible_os_family) }}"
+    codename: "{{ (ansible_distribution == 'Linux Mint') | ternary('bionic', ansible_os_family) }}"
   with_items: "{{ repositories.ppa }}"
   become: true
 
