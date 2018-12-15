@@ -11,6 +11,7 @@ golang:
     - github.com/gokcehan/lf     # file manager
     - github.com/tomnomnom/gron  # json reformatting for grep
     - github.com/akavel/up
+    - github.com/variadico/noti/cmd/noti
   install_exe: go
   install_cmd: get
 
