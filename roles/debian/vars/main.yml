@@ -37,6 +37,8 @@ packages:
   - libffi-dev
   - libssl-dev
   - libreadline-dev
+  - libncurses5-dev
+  - libncursesw5-dev
   # required for R
   - libcurl4-openssl-dev
   - sqlite3
