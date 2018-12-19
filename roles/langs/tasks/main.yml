@@ -33,7 +33,7 @@
 - name: Install anyenv-update plugin
   shell: "mkdir -p {{ anyenv_root }}/plugins && git clone https://github.com/znz/anyenv-update.git {{ anyenv_root }}/plugins/anyenv-update"
   args:
-    creates: "{{ anyenv_root/plugins/anyenv-update }}"
+    creates: "{{ anyenv_root }}/plugins/anyenv-update"
     executable: "{{ shell_exe }}"
 
 - name: Install envs

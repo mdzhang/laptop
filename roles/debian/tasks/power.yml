@@ -21,4 +21,5 @@
     name: "{{ item }}"
     state: started
     enabled: true
+  become: true
   with_items: "{{ sys_services }}"
