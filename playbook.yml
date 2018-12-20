@@ -6,11 +6,16 @@
     local_home: "{{ lookup('env', 'HOME') }}"
     data_dir: "{{ local_home }}/.local/share"
     anyenv_root: "{{ data_dir }}/anyenv"
+    cargo_home: "{{ data_dir }}/cargo"
+    rustup_home: "{{ data_dir }}/rustup"
     os_family: "{{ ansible_os_family | lower }}"
   environment:
     GEM_HOME: "{{ data_dir }}/gem"
     ANYENV_ROOT: "{{ anyenv_root }}"
+    RUST_HOME: "{{ rustup_home }}"
+    CARGO_HOME: "{{ cargo_home }}"
     PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
+    GOPATH: "{{ local_home }}/src/go"
   roles:
     - setup
     - { role: macos, when: ansible_os_family == "Darwin" }

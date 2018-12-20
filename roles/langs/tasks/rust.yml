@@ -1,7 +1,7 @@
 ---
 
 - name: Check if rustup exists
-  shell: "which cargo"
+  shell: "cargo -h"
   register: result
   ignore_errors: true
 
@@ -21,16 +21,12 @@
   when: not has_rustup
 
 - name: Install rustup
-  script: /tmp/rustup.sh
+  shell: "/tmp/rustup.sh -y"
   when: not has_rustup
-  become: true
 
 - name: Install cargo packages
-  environment:
-    RUSTUP_HOME: "{{ data_dir }}/rustup"
-    CARGO_HOME: "{{ data_dir }}/cargo"
   shell: "cargo install {{ pkg }}"
-  with_items: "{{ rust['pkgs'] }}"
+  with_items: "{{ rust.pkgs }}"
   loop_control:
     loop_var: pkg
   when: pkg not in pkg_check.stdout
