@@ -69,6 +69,7 @@ node:
     - markdownlint-cli
     - ctags          # better Javascript ctags
     - git-recall
+    - tldr
   install_exe: npm
   install_cmd: "install -g"
 
