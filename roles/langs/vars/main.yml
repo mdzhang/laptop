@@ -6,12 +6,12 @@ golang:
   vm: goenv
   version: 1.10.0
   pkgs:
-    - github.com/motemen/ghq     # for remote repo directory management
-    - github.com/knqyf263/pet    # snippet manager
-    - github.com/gokcehan/lf     # file manager
-    - github.com/tomnomnom/gron  # json reformatting for grep
+    - github.com/motemen/ghq                 # for repo directory management
+    - github.com/knqyf263/pet                # snippet manager
+    - github.com/gokcehan/lf                 # file manager
+    - github.com/tomnomnom/gron              # json reformatting for grep
     - github.com/akavel/up
-    - github.com/variadico/noti/cmd/noti
+    - github.com/variadico/noti/cmd/noti     # terminal notifier
   install_exe: go
   install_cmd: get
 
@@ -25,15 +25,14 @@ python:
   pkgs:
     - httpie         # pretty curl/wget
     - buku           # cli bookmark manager
-    - pre-commit
-    - flake8
-    - yapf
+    - pre-commit     # git hooks
+    - flake8         # code linter
+    - black          # code formatter
     - yq             # like jq, for yaml
     - grip           # GH flavored markdown preview
     - proselint      # linting english prose
-    - mackup
+    - mackup         # macOS dotfile backup
     - speedtest-cli  # test internet speed
-    - rice           # better R shell
     - ipython        # better python shell
     - jedi           # code completion
     - yamllint       # yaml linter
@@ -42,6 +41,7 @@ python:
     - neovim         # for vim8/neovim
     - xkcdpass       # for generating human-memorable passphrases
     - sqlparse       # for sqlformat
+    - radian         # better R shell
   install_exe: pip3
   install_cmd: install
 
@@ -62,14 +62,14 @@ node:
   version: 9.11.2
   pkgs:
     - yarn
-    - prettier
-    - eslint
-    - jsonlint
-    - write-good
-    - markdownlint-cli
-    - ctags          # better Javascript ctags
+    - prettier               # autoformatter
+    - eslint                 # js linter
+    - jsonlint               # json linter
+    - write-good             # prose linter
+    - markdownlint-cli       # markdown linter
+    - ctags                  # better Javascript ctags
     - git-recall
-    - tldr
+    - tldr                   # better man pages
   install_exe: npm
   install_cmd: "install -g"
 
@@ -95,8 +95,8 @@ node:
 rust:
   name: rust
   pkgs:
-    - exa
-    - ripgrep
+    - exa             # pretty ls
+    - ripgrep         # fast file searching
   install_exe: cargo
   install_cmd: install
 
@@ -108,9 +108,9 @@ rust:
 bash:
   debian:
     pkgs:
-      - github.com/mdzhang/killswitch  # vpn kill switch
-      - github.com/mdzhang/pipes       # terminal screensaver
-      - github.com/mdzhang/climate     # utility belt
+      - github.com/mdzhang/killswitch     # vpn kill switch
+      - github.com/mdzhang/pipes          # terminal screensaver
+      - github.com/mdzhang/climate        # utility belt
       - github.com/mdzhang/magoosh-vocab  # print GRE vocab on shell startup
 
 # TODO: considering moving R packages from dotfiles Rprofile
