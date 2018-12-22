@@ -78,6 +78,7 @@ packages:
   - r-base
   - r-base-dev
   - texlive
+  - pandoc
   # python packages
   - python-setuptools
   - python3
@@ -102,7 +103,7 @@ packages:
   - tlp
   - tlp-rdw
   - pidgin
-  - parcellite  # clipboard history
+  - copyq # clipboard history
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
