@@ -102,6 +102,7 @@ packages:
   - powertop
   - tlp
   - tlp-rdw
+  - pm-utils
   - pidgin
   - copyq # clipboard history
 
