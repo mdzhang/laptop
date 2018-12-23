@@ -1,4 +1,14 @@
 # install gnome-tweak-tool, arc-theme, dconf-cli, dconf-tools
 # use palenight theme from https://github.com/mdzhang/Gogh
+
 # set system mono font to Nerd font
 # and terminal font to system font
+
+# to avoid keyboard not detected after suspend, update /etc/default/grub w/
+#   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash atkbd.reset"
+# & sudo update-grub
+
+# for proper suspend, update /etc/systemd/logind.conf w/
+#   HandleSuspendKey=suspend
+#   HandleLidSwitch=suspend
+#   HandleLidSwitchDocked=suspend
