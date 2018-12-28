@@ -100,10 +100,13 @@ rust:
   install_exe: cargo
   install_cmd: install
 
-# php:
-#   name: php
-#   vm: phpenv
-#   version: 7.1.17
+php:
+  name: php
+  vm: phpenv
+  version: 7.1.17
+  install_exe: composer
+  install_cmd: install
+  pkgs: []
 
 bash:
   debian:

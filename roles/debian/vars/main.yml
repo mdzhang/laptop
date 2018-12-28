@@ -35,6 +35,9 @@ packages:
   - libreadline-dev
   - libncurses5-dev
   - libncursesw5-dev
+  # required for PHP
+  - libmcrypt-dev
+  - libtidy-dev
   # required for R
   - libcurl4-openssl-dev
   - sqlite3
@@ -103,6 +106,7 @@ packages:
   - tlp
   - tlp-rdw
   - pm-utils
+  - preload
   - pidgin
   - copyq # clipboard history
 

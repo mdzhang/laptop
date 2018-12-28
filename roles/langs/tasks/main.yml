@@ -6,7 +6,7 @@
       - "{{ python }}"
       - "{{ ruby }}"
       - "{{ node }}"
-      # - "{{ php }}"
+      - "{{ php }}"
 
 - name: Create directories
   file:
@@ -34,6 +34,12 @@
   shell: "mkdir -p {{ anyenv_root }}/plugins && git clone https://github.com/znz/anyenv-update.git {{ anyenv_root }}/plugins/anyenv-update"
   args:
     creates: "{{ anyenv_root }}/plugins/anyenv-update"
+    executable: "{{ shell_exe }}"
+
+- name: Install phpenv-composer plugin
+  shell: "mkdir -p {{ anyenv_root }}/envs/phpenv && git clone https://github.com/ngyuki/phpenv-composer.git {{ anyenv_root }}/envs/phpenv/plugins/phpenv-composer"
+  args:
+    creates: "{{ anyenv_root }}/envs/phpenv/plugins/phpenv-composer"
     executable: "{{ shell_exe }}"
 
 - name: Install envs
