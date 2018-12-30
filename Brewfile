@@ -76,6 +76,9 @@ brew 'tree'
 # pretty ls
 brew 'exa'
 
+# colorize a bunch of unix commands
+brew 'grc'
+
 # Terminal alternative
 cask 'kitty'
 
