@@ -112,6 +112,7 @@ packages:
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
+  - "http://kassiopeia.juls.savba.sk/~garabik/software/grc/grc_1.11.3-1_all.deb"
   - "https://github.com/sharkdp/bat/releases/download/v0.3.0/bat-musl_0.3.0_amd64.deb"
   - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2018.11.28_amd64.deb"
   - "https://prerelease.keybase.io/keybase_amd64.deb"
