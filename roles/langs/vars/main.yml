@@ -62,6 +62,7 @@ node:
   version: 9.11.2
   pkgs:
     - yarn
+    - fixjson                # autoformatter
     - prettier               # autoformatter
     - eslint                 # js linter
     - jsonlint               # json linter
