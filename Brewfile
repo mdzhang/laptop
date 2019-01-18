@@ -225,6 +225,8 @@ cask 'the-unarchiver'
 brew 'duti'
 # monitor network traffic
 # cask 'little-snitch'
+# keycast useful for dev screen sharing
+# cask 'keycastr'
 
 
 #
