@@ -74,6 +74,7 @@ packages:
   - ufw           # firewall configuration
   - yank
   - stow
+  - gnupg2
   # - google-cloud-sdk
   # - kubectl
   # - caffeine
