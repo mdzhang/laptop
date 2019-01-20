@@ -16,4 +16,4 @@
 # update BIOS for Linux optimized suspend
 #   see https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_6)#Automatic_(Linux_Vendor_Firmware_Service)
 
-# sudo apt-get install network-manager-openvpn-gnome
+# sudo apt-get install network-manager-openvpn-gnome seahorse-nautilus
