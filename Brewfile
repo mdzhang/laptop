@@ -121,6 +121,8 @@ brew 'redpen'
 # programming languages (env + dep management, linting)
 #
 
+# tkinter python support
+brew 'tcl-tk'
 # brew 'ghc'
 # brew 'haskell-stack'
 # brew 'glide'
