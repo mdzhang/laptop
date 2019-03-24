@@ -47,6 +47,7 @@ packages:
   - libcairo2-dev
   # - redis-server
   # - postgresql
+  - postgresql-client
   # cli utilities
   - ncdu                  # tui to explore disk space usage
   - docker-ce
