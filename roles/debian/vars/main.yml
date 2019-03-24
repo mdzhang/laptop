@@ -149,6 +149,7 @@ remote_executables:
 
 flatpaks:
   - com.getpostman.Postman
+  - io.dbeaver.DBeaverCommunity
 
 fonts:
   # TODO: rename from e.g. 'Hack Regular Nerd Font Complete' to 'Hack Nerd Font Regular'
