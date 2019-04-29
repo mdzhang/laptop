@@ -97,6 +97,9 @@ brew 'yank'
 # prefix cli commands to get a notification when done
 brew 'noti'
 
+# cli tools for handling structured text
+brew 'crush-tools'
+
 #
 # vim plugin support
 #

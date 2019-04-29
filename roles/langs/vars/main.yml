@@ -42,6 +42,7 @@ python:
     - xkcdpass       # for generating human-memorable passphrases
     - sqlparse       # for sqlformat
     - radian         # better R shell
+    - csvkit         # csv cli utilities
   install_exe: pip3
   install_cmd: install
 
@@ -116,5 +117,7 @@ bash:
       - github.com/mdzhang/pipes          # terminal screensaver
       - github.com/mdzhang/climate        # utility belt
       - github.com/mdzhang/magoosh-vocab  # print GRE vocab on shell startup
+      - github.com/decklin/curlicue       # oauth wrapper for curl
+      # - github.com/dkogan/feedgnuplot     # command line visualizations
 
 # TODO: considering moving R packages from dotfiles Rprofile
