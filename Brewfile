@@ -4,6 +4,7 @@ tap 'caskroom/versions'
 tap 'sgeb/mutt'
 tap 'eqnxio/equinox'
 tap 'johanhaleby/kubetail'
+tap 'homebrew/cask-drivers'
 
 #
 # override old, shitty, or missing system defaults
@@ -187,7 +188,6 @@ cask 'font-hack'
 cask 'font-hack-nerd-font'
 cask 'sourcetree'
 # brew 'heroku'
-brew 'tmux'
 # cask 'dash'
 # cask 'filezilla'
 # cask 'google-cloud-sdk'
@@ -204,6 +204,8 @@ cask 'postman'
 # cask 'openrefine'
 # cask 'mactex'
 cask 'tunnelblick'  # FOSS OpenVPN client
+# cask 'wacom-tablet'  # tablet driver
+# cask 'sketchbook'  # whiteboarding
 
 
 #
