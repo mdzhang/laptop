@@ -206,7 +206,7 @@ cask 'postman'
 cask 'tunnelblick'  # FOSS OpenVPN client
 # cask 'wacom-tablet'  # tablet driver
 # cask 'sketchbook'  # whiteboarding
-
+brew 'minio/stable/mc'
 
 #
 # lifeblood aka productivity and required apps
