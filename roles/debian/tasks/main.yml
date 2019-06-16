@@ -96,6 +96,6 @@
   with_items: "{{ flatpaks }}"
   become: true
 
-- include_tasks: fonts.yml
-- include_tasks: power.yml
-- include_tasks: docker.yml
+# - include_tasks: fonts.yml
+# - include_tasks: power.yml
+# - include_tasks: docker.yml

@@ -11,7 +11,7 @@ repositories:
     # - "ppa:kip/pidgin"
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
-    - "deb http://packages.cloud.google.com/apt cloud-sdk-artful main"
+    - "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main"
     # - "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
   key:
     - url: "https://download.docker.com/linux/ubuntu/gpg"
@@ -24,6 +24,8 @@ repositories:
 packages:
   # base dev tools
   - build-essential
+  - apt-transport-https
+  - ca-certificates
   - cmake
   - libpq-dev
   - libxml2-dev
@@ -49,34 +51,35 @@ packages:
   # - postgresql
   - postgresql-client
   # cli utilities
-  - ncdu                  # tui to explore disk space usage
+  - ncdu # tui to explore disk space usage
   - docker-ce
   - silversearcher-ag
-  - bcmwl-kernel-source   # kubuntu wifi fix
+  - bcmwl-kernel-source # kubuntu wifi fix
   - ctags
   - direnv
   - curl
-  - icdiff        # diff viewer
-  - lynx          # tui browser
-  - gdebi         # dependency aware package installer
+  - icdiff # diff viewer
+  - lynx # tui browser
+  - gdebi # dependency aware package installer
   - git
-  - jq            # json processor
-  - miller        # csv processor
+  - jq # json processor
+  - miller # csv processor
   - symlinks
-  - tree          # pretty directories
+  - tree # pretty directories
   - vim-gtk
   - xclip
-  # - fish
   - zsh
   - tmux
-  - neofetch      # pretty print system info
+  - neofetch # pretty print system info
   - irssi
   - openvpn
   - net-tools
-  - ufw           # firewall configuration
+  - ufw # firewall configuration
   - yank
   - stow
   - gnupg2
+  - parallel # GNU parallel
+  # - fish
   # - google-cloud-sdk
   # - kubectl
   # - caffeine
@@ -93,7 +96,7 @@ packages:
   - python3-dev
   - python3-pip
   # applications
-  - keepassxc     # password manager
+  - keepassxc # password manager
   - network-manager-openvpn
   # - calibre  # ebook manage; TODO: linux installer script needed!
   # - cheese  # webcam
@@ -101,7 +104,7 @@ packages:
   # - gimp  # image editor
   # TODO: at some point after this, run
   #   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  - flatpak  # for installing applications
+  - flatpak # for installing applications
   # - filelight # disk usage analyzer
   # - intellij-idea-community
   # - openjdk-8-jre
@@ -131,19 +134,19 @@ remote_executables:
   - url: "https://github.com/junegunn/fzf-bin/releases/download/0.17.4/fzf-0.17.4-linux_amd64.tgz"
     name: fzf
   - url: "https://github.com/peco/peco/releases/download/v0.5.2/peco_linux_amd64.tar.gz"
-    name: peco     # interactive cli filtering
+    name: peco # interactive cli filtering
   - url: "https://github.com/rgburke/grv/releases/download/v0.1.2/grv_v0.1.2_linux64"
-    name: grv      # git tui
+    name: grv # git tui
     # TODO: creates bin64 dir that should be put on path
-#   - url: "https://xpdfreader-dl.s3.amazonaws.com/xpdf-tools-linux-4.00.tar.gz"
-#   - url: "https://github.com/bcicen/ctop/releases/download/v0.7/ctop-0.7-linux-amd64"
-#     name: ctop
-#   - url: "https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64"
-#     name: cloud_sql_proxy
-#   - url: "https://storage.googleapis.com/minikube/releases/v0.25.2/minikube-linux-amd64"
-#     name: minikube
-#   - url: "https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz"
-#     name: helm
+  #   - url: "https://xpdfreader-dl.s3.amazonaws.com/xpdf-tools-linux-4.00.tar.gz"
+  #   - url: "https://github.com/bcicen/ctop/releases/download/v0.7/ctop-0.7-linux-amd64"
+  #     name: ctop
+  #   - url: "https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64"
+  #     name: cloud_sql_proxy
+  #   - url: "https://storage.googleapis.com/minikube/releases/v0.25.2/minikube-linux-amd64"
+  #     name: minikube
+  #   - url: "https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz"
+  #     name: helm
   - url: "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Linux-x86_64"
     name: docker-compose
 
