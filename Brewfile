@@ -100,6 +100,8 @@ brew 'noti'
 
 # cli tools for handling structured text
 brew 'crush-tools'
+# find CIDR min/max
+brew 'ipcalc'
 
 #
 # vim plugin support
