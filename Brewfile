@@ -21,6 +21,7 @@ brew 'zsh'
 
 # brew "binutils"
 # brew "diffutils"
+brew 'moreutils'
 brew 'coreutils'
 brew 'findutils', args: ['with-default-names']
 brew 'gnu-sed', args: ['with-default-names']
@@ -199,6 +200,7 @@ cask 'sourcetree'
 # cask 'google-cloud-sdk'
 # brew 'awscli'
 # brew 'terraform'
+# brew 'chtf'
 # brew 'packer'
 # cask 'ngrok'
 cask 'postman'
