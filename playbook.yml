@@ -18,8 +18,14 @@
     GOPATH: "{{ local_home }}/src/go"
   roles:
     - setup
-    - { role: macos, when: ansible_os_family == "Darwin" }
-    - { role: debian, when: ansible_os_family == "Debian" }
+    - {
+        role: macos,
+        when: ansible_os_family == "Darwin",
+      }
+    - {
+        role: debian,
+        when: ansible_os_family == "Debian",
+      }
     - { role: langs }
     - vpn
     # TODO:

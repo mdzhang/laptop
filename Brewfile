@@ -85,7 +85,7 @@ cask 'kitty'
 
 brew 'peco'
 
-# self-described swiss army knife for mac
+# self-described swiss army knife for mac; climate for mac
 brew 'm-cli'
 
 # log file navigator

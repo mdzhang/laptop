@@ -98,7 +98,7 @@ packages:
   # applications
   - keepassxc # password manager
   - network-manager-openvpn
-  # - calibre  # ebook manage; TODO: linux installer script needed!
+  # - calibre  # ebook manager; TODO: linux installer script needed!
   # - cheese  # webcam
   # - xournal  # pdf editor
   # - gimp  # image editor
@@ -124,6 +124,7 @@ remote_packages:
   - "https://github.com/sharkdp/bat/releases/download/v0.3.0/bat-musl_0.3.0_amd64.deb"
   - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2018.11.28_amd64.deb"
   - "https://prerelease.keybase.io/keybase_amd64.deb"
+  # - "https://discordapp.com/api/download?platform=linux&format=deb"
   # - "https://download1.rstudio.org/rstudio-xenial-1.1.423-amd64.deb"
   # - "https://downloads.plex.tv/plex-media-server/1.12.0.4829-6de959918/plexmediaserver_1.12.0.4829-6de959918_amd64.deb"
   # - "https://download.virtualbox.org/virtualbox/5.2.8/virtualbox-5.2_5.2.8-121009~Ubuntu~zesty_amd64.deb"
@@ -153,6 +154,8 @@ remote_executables:
 flatpaks:
   - com.getpostman.Postman
   - io.dbeaver.DBeaverCommunity
+  - us.zoom.Zoom
+  - com.valvesoftware.Steam
 
 fonts:
   # TODO: rename from e.g. 'Hack Regular Nerd Font Complete' to 'Hack Nerd Font Regular'
