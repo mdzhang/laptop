@@ -5,6 +5,7 @@ tap 'sgeb/mutt'
 tap 'eqnxio/equinox'
 tap 'johanhaleby/kubetail'
 tap 'homebrew/cask-drivers'
+tap 'heroku/brew'
 
 #
 # override old, shitty, or missing system defaults
@@ -210,6 +211,7 @@ cask 'tunnelblick'  # FOSS OpenVPN client
 # cask 'wacom-tablet'  # tablet driver
 # cask 'sketchbook'  # whiteboarding
 brew 'minio/stable/mc'
+brew 'heroku'
 
 #
 # lifeblood aka productivity and required apps

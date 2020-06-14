@@ -161,3 +161,6 @@ fonts:
   # TODO: rename from e.g. 'Hack Regular Nerd Font Complete' to 'Hack Nerd Font Regular'
   - url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Hack.zip
     name: Hack
+
+snapcraft:
+  - heroku

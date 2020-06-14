@@ -96,6 +96,10 @@
   with_items: "{{ flatpaks }}"
   become: true
 
+- name: Install from snapcraft
+  shell: snap install --classic "{{ item }}"
+  with_items: "{{ snapcraft }}"
+  become: true
 # - include_tasks: fonts.yml
 # - include_tasks: power.yml
 # - include_tasks: docker.yml
