@@ -1,0 +1,7 @@
+---
+win_pkgs:
+  - keepassxc
+  - Cygwin
+  - git
+  - vscode
+  # - lenovo-thinkvantage-system-update 

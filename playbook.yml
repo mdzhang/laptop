@@ -17,7 +17,7 @@
     PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
     GOPATH: "{{ local_home }}/src/go"
   roles:
-    - setup
+    # - setup
     - {
         role: macos,
         when: ansible_os_family == "Darwin",
@@ -26,8 +26,12 @@
         role: debian,
         when: ansible_os_family == "Debian",
       }
-    - { role: langs }
-    - vpn
+    - {
+        role: win,
+        when: ansible_os_family == "windows"
+      }
+      # - { role: langs }
+      # - vpn
     # TODO:
     #   chsh -s zsh; add zsh executable to /etc/shells
     #   KDE:

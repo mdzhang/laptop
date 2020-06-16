@@ -1,0 +1,8 @@
+---
+
+# install chocolatey package manager and
+# various packages
+- name: Install packages
+  win_chocolatey:
+    name: "{{ win_pkgs }}"
+    state: present
