@@ -124,6 +124,7 @@ remote_packages:
   - "https://github.com/sharkdp/bat/releases/download/v0.3.0/bat-musl_0.3.0_amd64.deb"
   - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2018.11.28_amd64.deb"
   - "https://prerelease.keybase.io/keybase_amd64.deb"
+  - "https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb"
   # - "https://discordapp.com/api/download?platform=linux&format=deb"
   # - "https://download1.rstudio.org/rstudio-xenial-1.1.423-amd64.deb"
   # - "https://downloads.plex.tv/plex-media-server/1.12.0.4829-6de959918/plexmediaserver_1.12.0.4829-6de959918_amd64.deb"
