@@ -1,10 +1,9 @@
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'sgeb/mutt'
+tap 'homebrew/cask'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'eqnxio/equinox'
 tap 'johanhaleby/kubetail'
-tap 'homebrew/cask-drivers'
 tap 'heroku/brew'
 
 #
@@ -14,8 +13,7 @@ tap 'heroku/brew'
 
 brew 'bash'
 brew 'git'
-# TODO: had to /usr/local/Cellar/python3/3.6.4_2/bin/pip3 install neovim jedi
-brew 'vim', args: ['with-override-system-vi', 'with-python3']
+brew 'vim'
 brew 'zsh'
 # brew 'fish'
 
@@ -23,17 +21,14 @@ brew 'zsh'
 # brew "diffutils"
 brew 'moreutils'
 brew 'coreutils'
-brew 'findutils', args: ['with-default-names']
-brew 'gnu-sed', args: ['with-default-names']
-brew 'grep', args: ['with-default-names']
-# brew 'libtool', args: ['with-default-names']
+brew 'findutils'
+brew 'gnu-sed'
+brew 'grep'
+# brew 'libtool'
 brew 'openssl'
 brew 'readline'
 brew 'ncdu'
 
-# brew 'newsboat'
-# brew 'irssi'
-# brew 'sgeb/mutt/mutt', args: ['with-trash-patch', 'with-sidebar-patch', 'with-gmail-server-search-patch', 'with-gmail-labels-patch', 'with-forwref-patch']
 brew 'nmap'
 brew 'urlview'
 brew 'watch'
@@ -71,7 +66,7 @@ brew 'jq'
 brew 'jo'
 
 # cli tool for previewing css selector output
-brew 'https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb'
+# brew 'https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb'
 
 # pretty list dirs
 brew 'tree'
@@ -134,7 +129,6 @@ brew 'tcl-tk'
 # brew 'ghc'
 # brew 'haskell-stack'
 # brew 'glide'
-brew 'rustup-init'
 brew 'pyenv-virtualenv'
 # cask 'r-app'
 # cask 'rstudio'
@@ -193,14 +187,12 @@ cask 'docker'
 cask 'font-hack'
 # favorite font; use the nerd font for devicon/glyph support
 cask 'font-hack-nerd-font'
-cask 'sourcetree'
+cask 'github'
 # brew 'heroku'
 # cask 'dash'
 # cask 'filezilla'
 # cask 'google-cloud-sdk'
 # brew 'awscli'
-# brew 'terraform'
-# brew 'packer'
 # cask 'ngrok'
 cask 'postman'
 # cask 'vagrant-manager'
@@ -211,8 +203,6 @@ cask 'postman'
 # cask 'openrefine'
 # cask 'mactex'
 cask 'tunnelblick'  # FOSS OpenVPN client
-# cask 'wacom-tablet'  # tablet driver
-# cask 'sketchbook'  # whiteboarding
 brew 'minio/stable/mc'
 brew 'heroku'
 
@@ -229,8 +219,7 @@ cask 'disk-inventory-x'
 cask 'flux'
 # clipboard manager
 cask 'flycut'
-cask 'copyq'
-cask 'google-chrome'
+cask 'firefox'
 # cask 'zoomus'
 # cask 'google-drive'
 # cask 'slack'

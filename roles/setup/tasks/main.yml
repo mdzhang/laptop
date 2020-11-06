@@ -4,4 +4,3 @@
 - name: Define variable
   set_fact:
     group_name: "{{ (ansible_os_family == 'Darwin') | ternary('staff', user_name) }}"
-
