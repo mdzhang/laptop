@@ -70,12 +70,16 @@ brew 'jo'
 
 # pretty list dirs
 brew 'tree'
+brew 'broot'
 
 # pretty ls
 brew 'exa'
 
 # colorize a bunch of unix commands
 brew 'grc'
+
+# runtime manager
+brew 'asdf'
 
 # Terminal alternative
 cask 'kitty'
@@ -224,6 +228,7 @@ cask 'firefox'
 # cask 'zoomus'
 # cask 'google-drive'
 # cask 'slack'
+# cask 'discord'
 cask 'the-unarchiver'
 # appstore 417375580 'BetterSnapTool'
 # set default apps for file types
