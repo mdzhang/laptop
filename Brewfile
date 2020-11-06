@@ -188,6 +188,7 @@ cask 'font-hack'
 # favorite font; use the nerd font for devicon/glyph support
 cask 'font-hack-nerd-font'
 cask 'github'
+cask 'visual-studio-code'
 # brew 'heroku'
 # cask 'dash'
 # cask 'filezilla'
