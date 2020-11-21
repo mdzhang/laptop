@@ -245,6 +245,7 @@ brew 'duti'
 
 # brew 'transmission'
 # cask 'calibre'
+# cask 'adium'  # IRC client
 # cask 'gimp'
 # cask 'origin'
 # cask 'plex-media-server'
