@@ -1,60 +1,13 @@
 ---
 
-- set_fact:
-    langs:
-      - "{{ golang }}"
-      - "{{ python }}"
-      - "{{ ruby }}"
-      - "{{ node }}"
-      - "{{ php }}"
+- name: Install languages with asdf
+  include_tasks: asdf.yml
 
-- name: Create directories
-  file:
-    path: "{{ item }}"
-    state: directory
-    owner: "{{ user_name }}"
-    group: "{{ group_name }}"
-    recurse: true
-  with_items:
-    - "{{ anyenv_root }}"
-
-- name: Get anyenv
-  git:
-    repo: "https://github.com/riywo/anyenv.git"
-    dest: "{{ anyenv_root }}"
-    clone: true
-    update: false
-
-- name: Eval anyenv init
-  shell: 'eval "$(anyenv init -)"'
-  args:
-    executable: "{{ shell_exe }}"
-
-- name: Install anyenv-update plugin
-  shell: "mkdir -p {{ anyenv_root }}/plugins && git clone https://github.com/znz/anyenv-update.git {{ anyenv_root }}/plugins/anyenv-update"
-  args:
-    creates: "{{ anyenv_root }}/plugins/anyenv-update"
-    executable: "{{ shell_exe }}"
-
-- name: Install phpenv-composer plugin
-  shell: "mkdir -p {{ anyenv_root }}/envs/phpenv && git clone https://github.com/ngyuki/phpenv-composer.git {{ anyenv_root }}/envs/phpenv/plugins/phpenv-composer"
-  args:
-    creates: "{{ anyenv_root }}/envs/phpenv/plugins/phpenv-composer"
-    executable: "{{ shell_exe }}"
-
-- name: Install envs
-  shell: "anyenv install -s {{ item.vm }}"
+- name: Install global packages per asdf managed language
+  include_tasks: pkgs.yml
   with_items: "{{ langs }}"
-
-- name: Install langs w/ packages
-  include_tasks: per_lang.yml
   loop_control:
     loop_var: lang
-  with_items: "{{ langs }}"
 
-- name: Install rust
-  include_tasks: rust.yml
-  when: rust is defined
-
-- name: Install shell packages
+- name: Install basher and bash packages
   include_tasks: bash.yml

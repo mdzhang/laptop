@@ -1,6 +1,7 @@
 ---
 # Install Homebrew with formulae
 
+# Triggers 'xcode-select --install'
 - name: Install homebrew
   shell: 'yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   args:
@@ -32,7 +33,3 @@
 
 - name: Cleanup
   shell: 'brew cleanup && brew cask cleanup'
-
-# TODO: use iTerm and change profile command to use /usr/local/bin/zsh
-#       use iTerm color profile from https://github.com/arcticicestudio/nord-iterm2
-#       enable ligatures and use Hack Nerd font

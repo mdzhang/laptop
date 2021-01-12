@@ -1,116 +1,9 @@
 ---
 shell_exe: /bin/bash
 
-golang:
-  name: go
-  vm: goenv
-  version: 1.10.0
-  pkgs:
-    - github.com/motemen/ghq                 # for repo directory management
-    - github.com/knqyf263/pet                # snippet manager
-    - github.com/gokcehan/lf                 # file manager
-    - github.com/tomnomnom/gron              # json reformatting for grep
-    - github.com/akavel/up
-    - github.com/variadico/noti/cmd/noti     # terminal notifier
-  install_exe: go
-  install_cmd: get
-
-# TODO: This freaks out if ~/.local/bin or ~/.local/lib
-#       are on path and already have packages
-# TODO: use Homebrew readline/openssl to install python
-python:
-  name: python
-  vm: pyenv
-  version: 3.7.0
-  pkgs:
-    - httpie         # pretty curl/wget
-    - buku           # cli bookmark manager
-    - pre-commit     # git hooks
-    - flake8         # code linter
-    - black          # code formatter
-    - yq             # like jq, for yaml
-    - grip           # GH flavored markdown preview
-    - proselint      # linting english prose
-    - mackup         # macOS dotfile backup
-    - speedtest-cli  # test internet speed
-    - ipython        # better python shell
-    - jedi           # code completion
-    - yamllint       # yaml linter
-    - ansible-lint   # ansible yaml linter
-    - glances        # system info tui
-    - neovim         # for vim8/neovim
-    - xkcdpass       # for generating human-memorable passphrases
-    - sqlparse       # for sqlformat
-    - radian         # better R shell
-    - csvkit         # csv cli utilities
-  install_exe: pip3
-  install_cmd: install
-
-ruby:
-  name: ruby
-  vm: rbenv
-  version: 2.5.3
-  pkgs:
-    - vmail          # vim-based email client
-    - sqlint
-    - tmuxinator
-  install_exe: gem
-  install_cmd: "install --install-dir $GEM_HOME"
-
-node:
-  name: node
-  vm: nodenv
-  version: 9.11.2
-  pkgs:
-    - yarn
-    - fixjson                # autoformatter
-    - prettier               # autoformatter
-    - eslint                 # js linter
-    - jsonlint               # json linter
-    - write-good             # prose linter
-    - markdownlint-cli       # markdown linter
-    - ctags                  # better Javascript ctags
-    - git-recall
-    - tldr                   # better man pages
-  install_exe: npm
-  install_cmd: "install -g"
-
-# scala:
-#   name: scala
-#   vm: scalaenv
-#   version: scala-2.12.6
-
-# TODO: gpg pub key signing issues, ended up doing brew cask install sbt@0.13
-# sbt:
-#   name: sbt
-#   vm: sbtenv
-#   version: sbt-1.1.1
-
-# TODO: have to
-#   jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/
-#   after brew cask install java8
-#   jenv add /usr/lib/jvm/java-8-openjdk-amd64
-# java:
-#   name: java
-#   vm: jenv
-
-rust:
-  name: rust
-  pkgs:
-    - exa             # pretty ls
-    - ripgrep         # fast file searching
-  install_exe: cargo
-  install_cmd: install
-
-php:
-  name: php
-  vm: phpenv
-  version: 7.1.17
-  install_exe: composer
-  install_cmd: install
-  pkgs: []
-
 bash:
+  darwin:
+    pkgs: []
   debian:
     pkgs:
       - github.com/mdzhang/killswitch     # vpn kill switch
@@ -119,5 +12,81 @@ bash:
       - github.com/mdzhang/magoosh-vocab  # print GRE vocab on shell startup
       - github.com/decklin/curlicue       # oauth wrapper for curl
       # - github.com/dkogan/feedgnuplot     # command line visualizations
+
+# asdf managed languages
+langs:
+
+  - name: golang
+    install_exe: go
+    install_cmd: get
+    pkgs:
+      - github.com/motemen/ghq                 # for repo directory management
+      - github.com/knqyf263/pet                # snippet manager
+      - github.com/gokcehan/lf                 # file manager
+      - github.com/tomnomnom/gron              # json reformatting for grep
+      - github.com/akavel/up
+
+  - name: ruby
+    install_exe: gem
+    install_cmd: "install --install-dir $GEM_HOME"
+    pkgs:
+      - sqlint
+
+  - name: nodejs
+    install_exe: npm
+    install_cmd: install -g
+    pkgs:
+      - yarn
+      - fixjson                # autoformatter
+      - prettier               # autoformatter
+      - eslint                 # js linter
+      - jsonlint               # json linter
+      - write-good             # prose linter
+      - markdownlint-cli       # markdown linter
+      - ctags                  # better Javascript ctags
+      - git-recall
+      - tldr                   # better man pages
+
+  - name: rust
+    git_url: https://github.com/asdf-community/asdf-rust.git
+    install_exe: cargo
+    install_cmd: install
+    pkgs:
+      - exa             # pretty ls
+      - ripgrep         # fast file searching
+  
+  # - name: php
+  #   git_url: https://github.com/asdf-community/asdf-php.git
+  #   install_exe: composer
+  #   install_cmd: install
+  #   pkgs: []
+
+  - name: java
+    git_url: https://github.com/halcyon/asdf-java.git
+
+  - name: python
+    install_exe: pip3
+    install_cmd: install
+    pkgs:
+      - httpie         # pretty curl/wget
+      - buku           # cli bookmark manager
+      - pre-commit     # git hooks
+      - flake8         # code linter
+      - black          # code formatter
+      - yq             # like jq, for yaml
+      - grip           # GH flavored markdown preview
+      - proselint      # linting english prose
+      - mackup         # macOS dotfile backup
+      - speedtest-cli  # test internet speed
+      - ipython        # better python shell
+      - jedi           # code completion
+      - yamllint       # yaml linter
+      - ansible-lint   # ansible yaml linter
+      - glances        # system info tui
+      - neovim         # for vim8/neovim
+      - xkcdpass       # for generating human-memorable passphrases
+      - sqlparse       # for sqlformat
+      - radian         # better R shell
+      - csvkit         # csv cli utilities
 
 # TODO: considering moving R packages from dotfiles Rprofile

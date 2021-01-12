@@ -11,7 +11,6 @@
     os_family: "{{ ansible_os_family | lower }}"
   environment:
     GEM_HOME: "{{ data_dir }}/gem"
-    ANYENV_ROOT: "{{ anyenv_root }}"
     RUST_HOME: "{{ rustup_home }}"
     CARGO_HOME: "{{ cargo_home }}"
     PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"

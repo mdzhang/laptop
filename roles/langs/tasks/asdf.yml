@@ -1,0 +1,51 @@
+---
+# Install languages with asdf
+- set_fact:
+    asdf_checkout: "{{ local_home }}/.local/share/asdf" 
+
+- name: Install asdf (macOS)
+  shell: brew install asdf 
+  when: ansible_os_family == "Darwin"
+
+- name: Install asdf (Linux)
+  git:
+    repo: "https://github.com/asdf-vm/asdf.git"
+    dest: "{{ asdf_checkout }}"
+    version: v0.8.0
+    clone: yes
+    update: no
+  when: ansible_os_family == "Debian"
+
+- name: Post-install asdf (Linux)
+  shell: . {{ asdf_checkout }}/asdf.sh
+  when: ansible_os_family == "Debian"
+
+- name: Install plugins
+  shell: asdf plugin-add {{ item.name }} {{ item.git_url | default('') }}
+  with_items: "{{ langs }}"
+  # errors on plugins already installed
+  ignore_errors: True
+
+- name: Copy global asdf tool versions file
+  copy:
+    src: tool-versions
+    dest: ~/.tool-versions
+
+- name: Source env vars (php) 
+  shell: PHP_WITHOUT_PEAR=yes && export PATH="$(brew --prefix bison)/bin:$PATH" && export PHP_CONFIGURE_OPTIONS="--with-zlib-dir=$(brew --prefix zlib) --with-bz2=$(brew --prefix bzip2) --with-iconv=$(brew --prefix libiconv) --with-readline=$(brew --prefix readline) --with-libedit=$(brew --prefix libedit) --with-tidy=$(brew --prefix tidy-html5)"
+  when: ansible_os_family == "Darwin"
+
+- name: Import keyring (node)
+  shell: bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+
+- name: Install versions directly
+  shell: asdf install {{ item }}
+  loop: "{{ lookup('file', '~/.tool-versions').splitlines() }}"
+
+- name: Set global default values
+  shell: asdf global {{ item }}
+  loop: "{{ lookup('file', '~/.tool-versions').splitlines() }}"
+
+- name: Reshim
+  shell: asdf reshim {{ item }}
+  loop: "{{ lookup('file', '~/.tool-versions').splitlines() }}"

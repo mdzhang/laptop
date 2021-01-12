@@ -1,3 +1,5 @@
+---
+
 - set_fact:
     basher_exe: "{{ local_home }}/.basher/bin/basher"
 
@@ -10,7 +12,7 @@
     update: no
 
 - name: Eval basher init
-  shell: 'eval "$({{ basher_exe}} init -)"'
+  shell: 'eval "$({{ basher_exe }} init -)"'
   args:
     executable: "{{ shell_exe }}"
 

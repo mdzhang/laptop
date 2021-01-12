@@ -1,0 +1,10 @@
+golang 1.15.6
+java openjdk-14.0.1
+nodejs 12.20.0
+php 8.0.1
+python 3.9.0
+ruby 2.7.2
+rust 1.49.0
+terraform 0.14.4
+terraform-docs v0.10.1
+tflint 0.23.1

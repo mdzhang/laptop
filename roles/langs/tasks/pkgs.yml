@@ -1,0 +1,7 @@
+---
+
+- name: Install packages
+  shell: "{{ lang.install_exe }} {{ lang.install_cmd }} {{ item }}"
+  with_items: "{{ lang.pkgs }}"
+  args:
+    executable: "{{ shell_exe }}"
