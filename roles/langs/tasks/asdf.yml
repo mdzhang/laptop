@@ -1,10 +1,10 @@
 ---
 # Install languages with asdf
 - set_fact:
-    asdf_checkout: "{{ local_home }}/.local/share/asdf" 
+    asdf_checkout: "{{ local_home }}/.local/share/asdf"
 
 - name: Install asdf (macOS)
-  shell: brew install asdf 
+  shell: brew install asdf
   when: ansible_os_family == "Darwin"
 
 - name: Install asdf (Linux)
@@ -31,8 +31,15 @@
     src: tool-versions
     dest: ~/.tool-versions
 
-- name: Source env vars (php) 
-  shell: PHP_WITHOUT_PEAR=yes && export PATH="$(brew --prefix bison)/bin:$PATH" && export PHP_CONFIGURE_OPTIONS="--with-zlib-dir=$(brew --prefix zlib) --with-bz2=$(brew --prefix bzip2) --with-iconv=$(brew --prefix libiconv) --with-readline=$(brew --prefix readline) --with-libedit=$(brew --prefix libedit) --with-tidy=$(brew --prefix tidy-html5)"
+- name: Set macOS specific env vars (php)
+  shell: >
+    export PHP_CONFIGURE_OPTIONS="--with-zlib-dir=$(brew --prefix zlib) \
+      --with-bz2=$(brew --prefix bzip2) \
+      --with-iconv=$(brew --prefix libiconv) \
+      --with-readline=$(brew --prefix readline) \
+      --with-libedit=$(brew --prefix libedit) \
+      --with-tidy=$(brew --prefix tidy-html5) \
+      --with-bison=$(brew --prefix bison)"
   when: ansible_os_family == "Darwin"
 
 - name: Import keyring (node)
@@ -41,6 +48,7 @@
 - name: Install versions directly
   shell: asdf install {{ item }}
   loop: "{{ lookup('file', '~/.tool-versions').splitlines() }}"
+  environment: {{ asdf_env }}
 
 - name: Set global default values
   shell: asdf global {{ item }}

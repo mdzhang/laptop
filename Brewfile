@@ -139,9 +139,6 @@ brew 'redpen'
 # tkinter python support
 brew 'tcl-tk'
 # brew 'ghc'
-# brew 'haskell-stack'
-# brew 'glide'
-# cask 'r-app'
 # cask 'rstudio'
 brew 'shellcheck'
 

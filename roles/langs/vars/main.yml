@@ -1,30 +1,33 @@
 ---
 shell_exe: /bin/bash
+asdf_env:
+  PHP_WITHOUT_PEAR: yes
 
 bash:
   darwin:
     pkgs: []
   debian:
     pkgs:
-      - github.com/mdzhang/killswitch     # vpn kill switch
-      - github.com/mdzhang/pipes          # terminal screensaver
-      - github.com/mdzhang/climate        # utility belt
-      - github.com/mdzhang/magoosh-vocab  # print GRE vocab on shell startup
-      - github.com/decklin/curlicue       # oauth wrapper for curl
-      # - github.com/dkogan/feedgnuplot     # command line visualizations
+      - github.com/decklin/curlicue      # oauth wrapper for curl
+      - github.com/mdzhang/climate       # utility belt
+      - github.com/mdzhang/killswitch    # vpn kill switch
+      - github.com/mdzhang/pipes         # terminal screensaver
 
 # asdf managed languages
 langs:
-
   - name: golang
     install_exe: go
     install_cmd: get
     pkgs:
-      - github.com/motemen/ghq                 # for repo directory management
-      - github.com/knqyf263/pet                # snippet manager
-      - github.com/gokcehan/lf                 # file manager
-      - github.com/tomnomnom/gron              # json reformatting for grep
       - github.com/akavel/up
+      - github.com/go-delve/delve/cmd/dlv # debugging
+      - github.com/gokcehan/lf            # file manager
+      - github.com/knqyf263/pet           # snippet manager
+      - github.com/motemen/ghq            # for repo directory management
+      - github.com/ramya-rao-a/go-outline # for IDE code outlining
+      - github.com/sqs/goreturns          # for IDE code completion
+      - github.com/tomnomnom/gron         # JSON reformatting for grep
+      - golang.org/x/tools/cmd/godoc      # source code docs
 
   - name: ruby
     install_exe: gem
@@ -36,25 +39,25 @@ langs:
     install_exe: npm
     install_cmd: install -g
     pkgs:
-      - yarn
-      - fixjson                # autoformatter
-      - prettier               # autoformatter
-      - eslint                 # js linter
-      - jsonlint               # json linter
-      - write-good             # prose linter
-      - markdownlint-cli       # markdown linter
-      - ctags                  # better Javascript ctags
+      - ctags            # better JS ctags
+      - eslint           # JS linter
+      - fixjson          # JSON autoformatter
       - git-recall
-      - tldr                   # better man pages
+      - jsonlint         # JSON linter
+      - markdownlint-cli # markdown linter
+      - prettier         # JS autoformatter
+      - tldr             # better man pages
+      - write-good       # prose linter
+      - yarn
 
   - name: rust
     git_url: https://github.com/asdf-community/asdf-rust.git
     install_exe: cargo
     install_cmd: install
     pkgs:
-      - exa             # pretty ls
-      - ripgrep         # fast file searching
-  
+      - exa     # pretty ls
+      - ripgrep # fast file searching
+
   # - name: php
   #   git_url: https://github.com/asdf-community/asdf-php.git
   #   install_exe: composer
@@ -68,25 +71,23 @@ langs:
     install_exe: pip3
     install_cmd: install
     pkgs:
-      - httpie         # pretty curl/wget
-      - buku           # cli bookmark manager
-      - pre-commit     # git hooks
-      - flake8         # code linter
-      - black          # code formatter
-      - yq             # like jq, for yaml
-      - grip           # GH flavored markdown preview
-      - proselint      # linting english prose
-      - mackup         # macOS dotfile backup
-      - speedtest-cli  # test internet speed
-      - ipython        # better python shell
-      - jedi           # code completion
-      - yamllint       # yaml linter
-      - ansible-lint   # ansible yaml linter
-      - glances        # system info tui
-      - neovim         # for vim8/neovim
-      - xkcdpass       # for generating human-memorable passphrases
-      - sqlparse       # for sqlformat
-      - radian         # better R shell
-      - csvkit         # csv cli utilities
-
-# TODO: considering moving R packages from dotfiles Rprofile
+      - ansible-lint  # ansible yaml linter
+      - black         # code formatter
+      - buku          # cli bookmark manager
+      - csvkit        # csv cli utilities
+      - flake8        # code linter
+      - glances       # system info tui
+      - grip          # GH flavored markdown preview
+      - httpie        # pretty curl/wget
+      - ipython       # better python shell
+      - jedi          # code completion
+      - mackup        # macOS dotfile backup
+      - neovim        # for vim8/neovim
+      - pre-commit    # git hooks
+      - proselint     # linting english prose
+      - radian        # better R shell
+      - speedtest-cli # test internet speed
+      - sqlparse      # for sqlformat
+      - xkcdpass      # for generating human-memorable passphrases
+      - yamllint      # yaml linter
+      - yq            # like jq, for yaml
