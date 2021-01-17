@@ -122,6 +122,7 @@ brew 'fzf'
 
 # for vim tagbar plugin
 brew 'ctags'
+brew 'gotags'
 
 # code searching tool
 brew 'the_silver_searcher'
