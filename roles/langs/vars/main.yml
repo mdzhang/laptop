@@ -1,7 +1,7 @@
 ---
 shell_exe: /bin/bash
 asdf_env:
-  PHP_WITHOUT_PEAR: yes
+  PHP_WITHOUT_PEAR: true
 
 bash:
   darwin:
@@ -28,6 +28,7 @@ langs:
       - github.com/sqs/goreturns          # for IDE code completion
       - github.com/tomnomnom/gron         # JSON reformatting for grep
       - golang.org/x/tools/cmd/godoc      # source code docs
+      - golang.org/x/tools/gopls          # code completion
 
   - name: ruby
     install_exe: gem
