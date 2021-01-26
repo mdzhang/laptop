@@ -46,6 +46,8 @@ brew 'wget'
 #
 # convenience cli utilities
 #
+# CLI prompt
+brew 'starship'
 
 # better tui diff
 brew 'icdiff'
@@ -110,6 +112,8 @@ brew 'noti'
 brew 'crush-tools'
 # find CIDR min/max
 brew 'ipcalc'
+
+brew 'knqyf263/pet/pet'
 
 #
 # vim plugin support

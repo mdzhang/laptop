@@ -92,3 +92,5 @@ langs:
       - xkcdpass      # for generating human-memorable passphrases
       - yamllint      # yaml linter
       - yq            # like jq, for yaml
+
+  - name: kotlin
