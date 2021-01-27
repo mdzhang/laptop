@@ -89,6 +89,7 @@ langs:
       - radian        # better R shell
       - speedtest-cli # test internet speed
       - sqlparse      # for sqlformat
+      - vim-vint      # for linting vimscript
       - xkcdpass      # for generating human-memorable passphrases
       - yamllint      # yaml linter
       - yq            # like jq, for yaml
