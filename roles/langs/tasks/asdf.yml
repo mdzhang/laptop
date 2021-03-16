@@ -48,7 +48,7 @@
 - name: Install versions directly
   shell: asdf install {{ item }}
   loop: "{{ lookup('file', '~/.tool-versions').splitlines() }}"
-  environment: {{ asdf_env }}
+  environment: "{{ asdf_env }}"
 
 - name: Set global default values
   shell: asdf global {{ item }}
