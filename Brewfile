@@ -75,6 +75,9 @@ brew 'jq'
 # create json outputs from shell
 brew 'jo'
 
+# view data's progress through process w/ pipeviewer
+brew 'pv'
+
 # cli tool for previewing css selector output
 # brew 'https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb'
 
@@ -194,7 +197,9 @@ brew 'grv'
 # brew 'neofetch'
 # brew 'qcachegrind'
 # brew 'equinox/release-tool'
+# brew 'krew' # kubectl plugin manager
 # brew 'kubectl'
+# brew 'kubectx'
 # brew 'kubernetes-helm'
 # brew 'kubernetes-cli'
 # brew 'kubetail', args: ['with-short-names']
