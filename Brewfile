@@ -258,6 +258,7 @@ brew 'duti'
 # cask 'little-snitch'
 # keycast useful for dev screen sharing
 # cask 'keycastr'
+cask 'typora'
 
 
 #
