@@ -29,6 +29,12 @@ langs:
       - github.com/tomnomnom/gron         # JSON reformatting for grep
       - golang.org/x/tools/cmd/godoc      # source code docs
       - golang.org/x/tools/gopls          # code completion
+      - honnef.co/go/tools/cmd/staticcheck
+      - github.com/uudashr/gopkgs/v2/cmd/gopkgs
+      - github.com/cweill/gotests
+      - github.com/fatih/gomodifytags
+      - github.com/haya14busa/goplay
+      - github.com/josharian/impl
 
   - name: ruby
     install_exe: gem
