@@ -69,6 +69,7 @@ langs:
       - tldr             # better man pages
       - write-good       # prose linter
       - yarn
+      - terminalizer     # terminal recordings
 
   - name: rust
     git_url: https://github.com/asdf-community/asdf-rust.git

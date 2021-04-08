@@ -9,3 +9,4 @@ rust 1.49.0
 terraform 0.14.4
 terraform-docs v0.10.1
 tflint 0.23.1
+tfsec 0.39.15
