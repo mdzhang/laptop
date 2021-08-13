@@ -5,6 +5,7 @@ tap 'homebrew/cask-versions'
 tap 'eqnxio/equinox'
 tap 'johanhaleby/kubetail'
 tap 'heroku/brew'
+tap 'homeport/tap'
 
 #
 # override old, shitty, or missing system defaults
@@ -49,6 +50,9 @@ brew 'wget'
 # CLI prompt
 brew 'starship'
 
+# curl for SMTP
+brew 'swaks'
+
 # better tui diff
 brew 'icdiff'
 
@@ -74,6 +78,9 @@ brew 'miller'
 brew 'jq'
 # create json outputs from shell
 brew 'jo'
+
+# diff yaml files
+brew 'dyff'
 
 # view data's progress through process w/ pipeviewer
 brew 'pv'

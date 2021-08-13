@@ -24,7 +24,7 @@ langs:
       - github.com/davidrjenni/reftools/cmd/fillstruct
       - github.com/fatih/gomodifytags
       - github.com/fatih/motion
-      - github.com/go-delve/delve/cmd/dlv # debugging
+      - github.com/go-delve/delve/cmd/dlv  # debugging
       - github.com/gokcehan/lf            # file manager
       - github.com/golangci/golangci-lint/cmd/golangci-lint
       - github.com/haya14busa/goplay
@@ -35,12 +35,13 @@ langs:
       - github.com/knqyf263/pet           # snippet manager
       - github.com/koron/iferr
       - github.com/motemen/ghq            # for repo directory management
-      - github.com/ramya-rao-a/go-outline # for IDE code outlining
+      - github.com/ramya-rao-a/go-outline  # for IDE code outlining
       - github.com/rogpeppe/godef
       - github.com/sqs/goreturns          # for IDE code completion
       - github.com/tomnomnom/gron         # JSON reformatting for grep
       - github.com/uudashr/gopkgs/v2/cmd/gopkgs
       - golang.org/x/lint/golint
+      - github.com/mgechev/revive
       - golang.org/x/tools/cmd/godoc      # source code docs
       - golang.org/x/tools/cmd/goimports
       - golang.org/x/tools/cmd/gorename
@@ -51,7 +52,7 @@ langs:
 
   - name: ruby
     install_exe: gem
-    install_cmd: "install --install-dir $GEM_HOME"
+    install_cmd: install --install-dir $GEM_HOME
     pkgs:
       - sqlint
 
@@ -64,7 +65,7 @@ langs:
       - fixjson          # JSON autoformatter
       - git-recall
       - jsonlint         # JSON linter
-      - markdownlint-cli # markdown linter
+      - markdownlint-cli  # markdown linter
       - prettier         # JS autoformatter
       - tldr             # better man pages
       - write-good       # prose linter
@@ -77,7 +78,7 @@ langs:
     install_cmd: install
     pkgs:
       - exa     # pretty ls
-      - ripgrep # fast file searching
+      - ripgrep  # fast file searching
 
   # - name: php
   #   git_url: https://github.com/asdf-community/asdf-php.git
@@ -107,7 +108,7 @@ langs:
       - pre-commit    # git hooks
       - proselint     # linting english prose
       - radian        # better R shell
-      - speedtest-cli # test internet speed
+      - speedtest-cli  # test internet speed
       - sqlparse      # for sqlformat
       - vim-vint      # for linting vimscript
       - xkcdpass      # for generating human-memorable passphrases
