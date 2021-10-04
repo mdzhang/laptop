@@ -43,6 +43,8 @@ brew 'urlview'
 brew 'watch'
 brew 'wget'
 
+brew 'gnupg'
+brew 'pinentry-mac'
 
 #
 # convenience cli utilities
