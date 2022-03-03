@@ -127,6 +127,9 @@ brew 'ipcalc'
 
 brew 'knqyf263/pet/pet'
 
+# jump around
+brew 'zoxide'
+
 #
 # vim plugin support
 #
