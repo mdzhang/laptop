@@ -12,6 +12,7 @@ repositories:
   url:
     - "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
     - "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main"
+    - "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main"
     # - "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
   key:
     - url: "https://download.docker.com/linux/ubuntu/gpg"
@@ -55,7 +56,6 @@ packages:
   - docker-ce
   - silversearcher-ag
   - bcmwl-kernel-source # kubuntu wifi fix
-  - ctags
   - direnv
   - curl
   - icdiff # diff viewer
@@ -154,9 +154,10 @@ remote_executables:
 
 flatpaks:
   - com.getpostman.Postman
-  - io.dbeaver.DBeaverCommunity
   - us.zoom.Zoom
   - com.valvesoftware.Steam
+  - org.signal.Signal
+  - com.visualstudio.code
 
 fonts:
   # TODO: rename from e.g. 'Hack Regular Nerd Font Complete' to 'Hack Nerd Font Regular'
@@ -165,3 +166,4 @@ fonts:
 
 snapcraft:
   - heroku
+  - universal-ctags
