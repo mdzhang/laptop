@@ -49,6 +49,7 @@ langs:
       - golang.org/x/tools/gopls          # code completion
       - honnef.co/go/tools/cmd/keyify
       - honnef.co/go/tools/cmd/staticcheck
+      - cuelang.org/go/cmd/cue@latest
 
   - name: ruby
     install_exe: gem
