@@ -92,7 +92,7 @@
   become: true
 
 - name: Install flatpaks
-  shell: flatpak install -y flathub "{{ item }}"
+  shell: flatpak install "{{ flatpak.remote | default('-y flathub', true) }}" "{{ item.name }}"
   with_items: "{{ flatpaks }}"
   become: true
 
