@@ -117,9 +117,11 @@ packages:
   - preload
   - pidgin
   - copyq # clipboard history
+  - gnome-subtitles
 
 # Packages to install from remote source, when no PPA is available
 remote_packages:
+  - "plexmediaserver_1.26.0.5715-8cf78dab3_amd64.deb"
   - "http://kassiopeia.juls.savba.sk/~garabik/software/grc/grc_1.11.3-1_all.deb"
   - "https://github.com/sharkdp/bat/releases/download/v0.3.0/bat-musl_0.3.0_amd64.deb"
   - "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2018.11.28_amd64.deb"
@@ -151,6 +153,8 @@ remote_executables:
   #     name: helm
   - url: "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Linux-x86_64"
     name: docker-compose
+  - url: "https://github.com/owenthereal/ccat/releases/download/v1.1.0/linux-amd64-1.1.0.tar.gz"
+    name: ccat
 
 flatpaks:
   - com.getpostman.Postman
@@ -167,3 +171,4 @@ fonts:
 snapcraft:
   - heroku
   - universal-ctags
+  - emote
