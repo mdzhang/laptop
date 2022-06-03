@@ -42,9 +42,6 @@
       --with-bison=$(brew --prefix bison)"
   when: ansible_os_family == "Darwin"
 
-- name: Import keyring (node)
-  shell: bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-
 - name: Install versions directly
   shell: asdf install {{ item }}
   loop: "{{ lookup('file', '~/.tool-versions').splitlines() }}"
