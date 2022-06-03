@@ -13,7 +13,7 @@
     GEM_HOME: "{{ data_dir }}/gem"
     RUST_HOME: "{{ rustup_home }}"
     CARGO_HOME: "{{ cargo_home }}"
-    PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin"
+    PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin:/opt/homebrew/bin"
     GOPATH: "{{ local_home }}/src/go"
   roles:
     - setup
