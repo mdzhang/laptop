@@ -1,7 +1,14 @@
 ---
-
 - name: Install packages
   shell: "{{ lang.install_exe }} {{ lang.install_cmd }} {{ item }}"
   with_items: "{{ lang.pkgs }}"
+  when: lang.install_exe != "go"
+  args:
+    executable: "{{ shell_exe }}"
+
+- name: Install go packages
+  shell: "{{ lang.install_exe }} {{ lang.install_cmd }} {{ item }}@latest"
+  with_items: "{{ lang.pkgs }}"
+  when: lang.install_exe == "go"
   args:
     executable: "{{ shell_exe }}"

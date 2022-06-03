@@ -8,48 +8,48 @@ bash:
     pkgs: []
   debian:
     pkgs:
-      - github.com/decklin/curlicue      # oauth wrapper for curl
-      - github.com/mdzhang/climate       # utility belt
-      - github.com/mdzhang/killswitch    # vpn kill switch
-      - github.com/mdzhang/pipes         # terminal screensaver
+      - github.com/decklin/curlicue # oauth wrapper for curl
+      - github.com/mdzhang/climate # utility belt
+      - github.com/mdzhang/killswitch # vpn kill switch
+      - github.com/mdzhang/pipes # terminal screensaver
 
 # asdf managed languages
 langs:
   - name: golang
     install_exe: go
-    install_cmd: get
+    install_cmd: install
     pkgs:
       - github.com/akavel/up
-      - github.com/cweill/gotests
+      # - github.com/cweill/gotests
       - github.com/davidrjenni/reftools/cmd/fillstruct
       - github.com/fatih/gomodifytags
       - github.com/fatih/motion
-      - github.com/go-delve/delve/cmd/dlv  # debugging
-      - github.com/gokcehan/lf            # file manager
+      - github.com/go-delve/delve/cmd/dlv # debugging
+      - github.com/gokcehan/lf # file manager
       - github.com/golangci/golangci-lint/cmd/golangci-lint
-      - github.com/haya14busa/goplay
+      # - github.com/haya14busa/goplay
       - github.com/josharian/impl
       - github.com/jstemmer/gotags
       - github.com/kisielk/errcheck
       - github.com/klauspost/asmfmt/cmd/asmfmt
-      - github.com/knqyf263/pet           # snippet manager
+      - github.com/knqyf263/pet # snippet manager
       - github.com/koron/iferr
-      - github.com/motemen/ghq            # for repo directory management
-      - github.com/ramya-rao-a/go-outline  # for IDE code outlining
+      - github.com/x-motemen/ghq # for repo directory management
+      - github.com/ramya-rao-a/go-outline # for IDE code outlining
       - github.com/rogpeppe/godef
-      - github.com/sqs/goreturns          # for IDE code completion
-      - github.com/tomnomnom/gron         # JSON reformatting for grep
+      - github.com/sqs/goreturns # for IDE code completion
+      - github.com/tomnomnom/gron # JSON reformatting for grep
       - github.com/uudashr/gopkgs/v2/cmd/gopkgs
       - golang.org/x/lint/golint
       - github.com/mgechev/revive
-      - golang.org/x/tools/cmd/godoc      # source code docs
+      - golang.org/x/tools/cmd/godoc # source code docs
       - golang.org/x/tools/cmd/goimports
       - golang.org/x/tools/cmd/gorename
       - golang.org/x/tools/cmd/guru
-      - golang.org/x/tools/gopls          # code completion
+      - golang.org/x/tools/gopls # code completion
       - honnef.co/go/tools/cmd/keyify
       - honnef.co/go/tools/cmd/staticcheck
-      - cuelang.org/go/cmd/cue@latest
+      - cuelang.org/go/cmd/cue
 
   - name: ruby
     install_exe: gem
@@ -61,64 +61,73 @@ langs:
     install_exe: npm
     install_cmd: install -g
     pkgs:
-      - ctags            # better JS ctags
-      - eslint           # JS linter
-      - fixjson          # JSON autoformatter
+      - ctags # better JS ctags
+      - eslint # JS linter
+      - fixjson # JSON autoformatter
       - git-recall
-      - jsonlint         # JSON linter
-      - markdownlint-cli  # markdown linter
-      - prettier         # JS autoformatter
-      - tldr             # better man pages
-      - write-good       # prose linter
+      - jsonlint # JSON linter
+      - markdownlint-cli # markdown linter
+      - prettier # JS autoformatter
+      - tldr # better man pages
+      - write-good # prose linter
       - yarn
-      - terminalizer     # terminal recordings
+      # - terminalizer # terminal recordings
 
   - name: rust
     git_url: https://github.com/asdf-community/asdf-rust.git
     install_exe: cargo
     install_cmd: install
     pkgs:
-      - exa     # pretty ls
-      - ripgrep  # fast file searching
+      - exa # pretty ls
+      - ripgrep # fast file searching
 
   - name: php
     git_url: https://github.com/asdf-community/asdf-php.git
-  #   install_exe: composer
-  #   install_cmd: install
-  #   pkgs: []
+    install_exe: composer
+    install_cmd: install
+    pkgs: []
 
   - name: java
     git_url: https://github.com/halcyon/asdf-java.git
+    pkgs: []
 
   - name: python
     install_exe: pip3
     install_cmd: install
     pkgs:
-      - ansible-lint  # ansible yaml linter
-      - black         # code formatter
-      - buku          # cli bookmark manager
-      - csvkit        # csv cli utilities
-      - flake8        # code linter
-      - glances       # system info tui
-      - grip          # GH flavored markdown preview
-      - httpie        # pretty curl/wget
-      - ipython       # better python shell
-      - jedi          # code completion
-      - mackup        # macOS dotfile backup
-      - neovim        # for vim8/neovim
-      - pre-commit    # git hooks
-      - proselint     # linting english prose
-      - radian        # better R shell
-      - speedtest-cli  # test internet speed
-      - sqlparse      # for sqlformat
-      - vim-vint      # for linting vimscript
-      - xkcdpass      # for generating human-memorable passphrases
-      - yamllint      # yaml linter
-      - yq            # like jq, for yaml
+      - ansible-lint # ansible yaml linter
+      - black # code formatter
+      - buku # cli bookmark manager
+      - csvkit # csv cli utilities
+      - flake8 # code linter
+      - glances # system info tui
+      - grip # GH flavored markdown preview
+      - httpie # pretty curl/wget
+      - ipython # better python shell
+      - jedi # code completion
+      - mackup # macOS dotfile backup
+      - neovim # for vim8/neovim
+      - pre-commit # git hooks
+      - proselint # linting english prose
+      - radian # better R shell
+      - speedtest-cli # test internet speed
+      - sqlparse # for sqlformat
+      - vim-vint # for linting vimscript
+      - xkcdpass # for generating human-memorable passphrases
+      - yamllint # yaml linter
+      - yq # like jq, for yaml
 
   - name: kotlin
+    pkgs: []
 
   - name: terraform
+    pkgs: []
+
   - name: terraform-docs
+    pkgs: []
+
   - name: tflint
+    pkgs: []
+
   - name: tfsec
+    pkgs: []
