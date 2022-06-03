@@ -36,6 +36,6 @@
     upgrade_all: yes
 
 - name: Cleanup
-  shell: 'brew cleanup && brew cask cleanup'
+  shell: 'brew cleanup'
   environment:
     PATH: "{{ ansible_env.PATH }}:/opt/homebrew/bin"
