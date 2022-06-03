@@ -5,7 +5,7 @@
 - name: Install homebrew
   shell: 'yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
   args:
-    creates: /usr/local/bin/brew
+    creates: /opt/homebrew/bin/brew
 
 - name: Ensure homebrew is updated
   homebrew:
@@ -18,6 +18,8 @@
 
 - name: Check if Brewfile contains updates
   shell: brew bundle check --file="{{ brewfile | default('./Brewfile') }}"
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/opt/homebrew/bin"
   register: bundle_check_result
   ignore_errors: true
 
@@ -25,6 +27,8 @@
 #       at /Applications well at all
 - name: Install apps using Brewfile
   shell: brew bundle install --file="{{ brewfile | default('./Brewfile') }}"
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/opt/homebrew/bin"
   when: bundle_check_result is failed
 
 - name: Upgrade all packages
@@ -33,3 +37,5 @@
 
 - name: Cleanup
   shell: 'brew cleanup && brew cask cleanup'
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/opt/homebrew/bin"
