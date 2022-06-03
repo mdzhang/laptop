@@ -49,6 +49,8 @@ brew 'pinentry-mac'
 #
 # convenience cli utilities
 #
+
+
 # CLI prompt
 brew 'starship'
 
@@ -130,6 +132,7 @@ brew 'knqyf263/pet/pet'
 # jump around
 brew 'zoxide'
 
+
 #
 # vim plugin support
 #
@@ -152,9 +155,11 @@ brew 'grip'
 brew 'proselint'
 brew 'redpen'
 
+
 #
 # programming languages (env + dep management, linting)
 #
+
 
 # tkinter python support
 brew 'tcl-tk'
@@ -165,7 +170,7 @@ brew 'shellcheck'
 
 
 #
-# datastores and GUIs for them
+# datastores
 #
 
 
@@ -173,12 +178,6 @@ brew 'mysql', restart_service: true
 brew 'postgresql', restart_service: true
 brew 'redis', restart_service: true
 brew 'sqlite'
-
-# cask 'psequel'
-# cask 'pgadmin4'
-# cask 'sequel-pro'
-# cask 'sqlitebrowser'
-# cask 'dbeaver-community'
 
 
 #
@@ -209,13 +208,6 @@ brew 'grv'
 # brew 'neofetch'
 # brew 'qcachegrind'
 # brew 'equinox/release-tool'
-# brew 'krew' # kubectl plugin manager
-# brew 'kubectl'
-# brew 'kubectx'
-# brew 'kubernetes-helm'
-# brew 'kubernetes-cli'
-# brew 'kubetail', args: ['with-short-names']
-# brew 'socat' # for k8s, kid
 cask 'docker'
 cask 'font-hack'
 # favorite font; use the nerd font for devicon/glyph support
@@ -242,10 +234,9 @@ cask 'visual-studio-code'
 # cask 'mactex'
 cask 'tunnelblick'  # FOSS OpenVPN client
 brew 'minio/stable/mc'
-brew 'heroku'
 
 #
-# lifeblood aka productivity and required apps
+# productivity apps
 #
 
 # hide menubar items
@@ -257,7 +248,7 @@ cask 'disk-inventory-x'
 cask 'flux'
 # clipboard manager
 cask 'flycut'
-cask 'firefox'
+# cask 'firefox'
 # cask 'zoomus'
 # cask 'google-drive'
 # cask 'slack'
