@@ -1,10 +1,9 @@
 golang 1.18.3
 java openjdk-18.0.1
 kotlin 1.6.21
-nodejs 12.20.0
 php 8.0.1
 python 3.9.0
-nodejs 18.3.0
+nodejs 18.2.0
 ruby 3.1.0
 rust 1.61.0
 terraform 1.2.2
