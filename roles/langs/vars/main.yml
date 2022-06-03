@@ -81,8 +81,8 @@ langs:
       - exa     # pretty ls
       - ripgrep  # fast file searching
 
-  # - name: php
-  #   git_url: https://github.com/asdf-community/asdf-php.git
+  - name: php
+    git_url: https://github.com/asdf-community/asdf-php.git
   #   install_exe: composer
   #   install_cmd: install
   #   pkgs: []
@@ -117,3 +117,8 @@ langs:
       - yq            # like jq, for yaml
 
   - name: kotlin
+
+  - name: terraform
+  - name: terraform-docs
+  - name: tflint
+  - name: tfsec
