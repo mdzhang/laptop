@@ -3,7 +3,6 @@ tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'eqnxio/equinox'
-tap 'johanhaleby/kubetail'
 tap 'heroku/brew'
 tap 'homeport/tap'
 
@@ -254,7 +253,7 @@ cask 'flycut'
 # cask 'slack'
 # cask 'discord'
 cask 'the-unarchiver'
-# appstore 417375580 'BetterSnapTool'
+cask 'rectangle' # window snapping
 # set default apps for file types
 brew 'duti'
 # monitor network traffic
