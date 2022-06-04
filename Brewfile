@@ -142,7 +142,7 @@ brew 'ack'
 brew 'fzf'
 
 # for vim tagbar plugin
-brew 'ctags'
+brew 'universal-ctags'
 brew 'gotags'
 
 # code searching tool
