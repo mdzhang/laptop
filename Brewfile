@@ -244,7 +244,6 @@ cask 'dropbox'
 cask 'bettertouchtool'
 cask 'caffeine'
 cask 'disk-inventory-x'
-cask 'flux'
 # clipboard manager
 cask 'flycut'
 # cask 'firefox'
