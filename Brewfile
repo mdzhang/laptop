@@ -265,6 +265,8 @@ brew 'duti'
 # cask 'little-snitch'
 # keycast useful for dev screen sharing
 # cask 'keycastr'
+# screen recorder
+# cask 'kap'
 cask 'typora'
 
 
