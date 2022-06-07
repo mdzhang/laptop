@@ -153,6 +153,7 @@ brew 'grip'
 # lint english prose
 brew 'proselint'
 brew 'redpen'
+brew 'hadolint'
 
 
 #
