@@ -247,7 +247,6 @@ brew 'minio/stable/mc'
 # hide menubar items
 cask 'vanilla'
 cask 'dropbox'
-cask 'bettertouchtool'
 cask 'caffeine'
 cask 'disk-inventory-x'
 # clipboard manager
