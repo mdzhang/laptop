@@ -56,6 +56,9 @@ langs:
     install_cmd: install --install-dir $GEM_HOME
     pkgs:
       - sqlint
+      - rubocop
+      - reek
+      - sorbet
 
   - name: nodejs
     install_exe: npm
@@ -80,6 +83,7 @@ langs:
     pkgs:
       - exa # pretty ls
       - ripgrep # fast file searching
+      - tuc # better cut
 
   - name: php
     git_url: https://github.com/asdf-community/asdf-php.git
