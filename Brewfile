@@ -11,7 +11,6 @@ tap 'warrensbox/tap/tfswitch'
 # override old, shitty, or missing system defaults
 #
 
-
 # brew 'bash'
 brew 'git'
 brew 'vim'
@@ -49,7 +48,6 @@ brew 'pinentry-mac'
 #
 # convenience cli utilities
 #
-
 
 # CLI prompt
 brew 'starship'
@@ -132,11 +130,9 @@ brew 'knqyf263/pet/pet'
 # jump around
 brew 'zoxide'
 
-
 #
 # vim plugin support
 #
-
 
 # for vim search
 brew 'ack'
@@ -153,14 +149,15 @@ brew 'the_silver_searcher'
 brew 'grip'
 # lint english prose
 brew 'proselint'
+brew 'vale'
 brew 'redpen'
 brew 'hadolint'
-
+# github action lint
+brew 'actionlint'
 
 #
 # programming languages (env + dep management, linting)
 #
-
 
 # tkinter python support
 brew 'tcl-tk'
@@ -169,22 +166,18 @@ brew 'r'
 # cask 'rstudio'
 brew 'shellcheck'
 
-
 #
 # datastores
 #
-
 
 brew 'mysql', restart_service: true
 brew 'postgresql', restart_service: true
 brew 'redis', restart_service: true
 brew 'sqlite'
 
-
 #
 # security, privacy, and authentication
 #
-
 
 brew 'gpg'
 cask 'keepassxc'
@@ -193,7 +186,6 @@ cask 'keepassxc'
 # brew 'wireshark'
 # brew 'sslsplit'
 # brew 'tcptrace'
-
 
 #
 # other dev tools
@@ -204,6 +196,8 @@ brew 'tldr'
 # per dir env var loader
 brew 'direnv'
 brew 'grv'
+# mac app store installs
+brew 'mas'
 # brew 'sops'
 # brew 'graphviz'
 # brew 'neofetch'
@@ -214,6 +208,7 @@ cask 'font-hack'
 # favorite font; use the nerd font for devicon/glyph support
 cask 'font-hack-nerd-font'
 cask 'github'
+# gh extension install dlvhdr/gh-dash
 brew 'gh'
 cask 'visual-studio-code'
 # brew 'heroku'
@@ -225,7 +220,8 @@ cask 'visual-studio-code'
 # brew 'saml2aws'
 # brew 'aws-iam-authenticator'
 # brew 'kubectl'
-# brew 'kubectx'
+brew 'kubectx'
+brew 'stern'
 # brew 'helm'
 # brew 'kind'
 # cask 'ngrok'
@@ -237,13 +233,15 @@ cask 'visual-studio-code'
 # cask 'anaconda2'
 # cask 'openrefine'
 # cask 'mactex'
-cask 'tunnelblick'  # FOSS OpenVPN client
+cask 'tunnelblick' # FOSS OpenVPN client
 brew 'minio/stable/mc'
 
 #
 # productivity apps
 #
 
+# text expander
+cask 'espanso'
 # hide menubar items
 cask 'vanilla'
 cask 'dropbox'
@@ -267,7 +265,8 @@ brew 'duti'
 # screen recorder
 # cask 'kap'
 cask 'typora'
-
+brew 'ffmpeg'
+brew 'gifsicle'
 
 #
 # entertainment

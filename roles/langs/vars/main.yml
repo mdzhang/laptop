@@ -84,6 +84,7 @@ langs:
       - exa # pretty ls
       - ripgrep # fast file searching
       - tuc # better cut
+      - gitui
 
   - name: php
     git_url: https://github.com/asdf-community/asdf-php.git
