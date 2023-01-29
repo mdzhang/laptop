@@ -50,6 +50,7 @@ langs:
       - honnef.co/go/tools/cmd/keyify
       - honnef.co/go/tools/cmd/staticcheck
       - cuelang.org/go/cmd/cue
+      - golang.org/x/vuln/cmd/govulncheck
 
   - name: ruby
     install_exe: gem
@@ -135,4 +136,10 @@ langs:
     pkgs: []
 
   - name: tfsec
+    pkgs: []
+
+  - name: erlang
+    pkgs: []
+
+  - name: elixir
     pkgs: []

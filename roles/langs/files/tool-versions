@@ -1,3 +1,5 @@
+elixir 1.14.3-otp-25
+erlang 25.2.1
 golang 1.18.3
 java openjdk-18.0.1
 kotlin 1.6.21
