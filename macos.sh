@@ -4,7 +4,7 @@
 # NB: be sure to use system python3
 /usr/bin/pip3 install ansible --user
 
-export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 installdir="/tmp/laptop-$RANDOM"
 mkdir $installdir
