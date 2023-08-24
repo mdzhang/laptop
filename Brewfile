@@ -188,6 +188,7 @@ brew 'gpg'
 cask 'keepassxc'
 # cask 'keybase'
 # cask 'nordvpn'
+# cask 'lantern' # free vpn
 # brew 'wireshark'
 # brew 'sslsplit'
 # brew 'tcptrace'
@@ -270,6 +271,7 @@ brew 'duti'
 cask 'typora'
 brew 'ffmpeg'
 brew 'gifsicle'
+# mas 'Pandan', id: 1569600264 # time awareness in menubar
 
 #
 # entertainment
