@@ -1,5 +1,6 @@
 ---
 shell_exe: /bin/bash
+
 asdf_env:
   PHP_WITHOUT_PEAR: true
 
@@ -106,7 +107,6 @@ langs:
       - black # code formatter
       - buku # cli bookmark manager
       - csvkit # csv cli utilities
-      - flake8 # code linter
       - glances # system info tui
       - grip # GH flavored markdown preview
       - httpie # pretty curl/wget
@@ -117,6 +117,7 @@ langs:
       - pre-commit # git hooks
       - proselint # linting english prose
       - radian # better R shell
+      - ruff # lint
       - speedtest-cli # test internet speed
       - sqlparse # for sqlformat
       - vim-vint # for linting vimscript
