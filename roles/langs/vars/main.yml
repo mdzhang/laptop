@@ -88,6 +88,7 @@ langs:
       - ripgrep # fast file searching
       - tuc # better cut
       - gitui
+      - tailspin
 
   - name: php
     git_url: https://github.com/asdf-community/asdf-php.git
