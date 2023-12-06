@@ -10,7 +10,7 @@
 - name: Ensure homebrew is updated
   homebrew:
     state: latest
-    update_homebrew: yes
+    update_homebrew: true
 
 - name: Enable Homebrew bundle tap
   homebrew_tap:
@@ -29,7 +29,7 @@
 
 - name: Upgrade all packages
   homebrew:
-    upgrade_all: yes
+    upgrade_all: true
 
 - name: Cleanup
   shell: 'brew cleanup'

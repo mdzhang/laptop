@@ -11,3 +11,6 @@
 
 - name: Install basher and bash packages
   include_tasks: bash.yml
+
+- name: Setup Scala
+  include_tasks: scala.yml

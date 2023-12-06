@@ -170,6 +170,8 @@ brew 'tcl-tk'
 brew 'r'
 # cask 'rstudio'
 brew 'shellcheck'
+# scala
+brew 'coursier/formulas/coursier'
 
 #
 # datastores
@@ -212,6 +214,7 @@ cask 'docker'
 cask 'font-hack'
 # favorite font; use the nerd font for devicon/glyph support
 cask 'font-hack-nerd-font'
+cask 'font-monaspace'
 cask 'github'
 # gh extension install dlvhdr/gh-dash
 brew 'gh'

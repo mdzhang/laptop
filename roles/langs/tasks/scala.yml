@@ -1,0 +1,7 @@
+---
+
+- name: Coursier setup
+  shell: cs setup
+
+- name: Install metals LSP
+  shell: cs install metals
