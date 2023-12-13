@@ -159,6 +159,7 @@ brew 'redpen'
 brew 'hadolint'
 # github action lint
 brew 'actionlint'
+brew 'lazygit'
 
 #
 # programming languages (env + dep management, linting)
@@ -271,7 +272,7 @@ brew 'duti'
 # cask 'keycastr'
 # screen recorder
 # cask 'kap'
-cask 'typora'
+cask 'obsidian' # for note taking
 brew 'ffmpeg'
 brew 'gifsicle'
 # mas 'Pandan', id: 1569600264 # time awareness in menubar
