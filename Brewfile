@@ -135,6 +135,9 @@ brew 'knqyf263/pet/pet'
 # jump around
 brew 'zoxide'
 
+# look at disk usage
+brew 'dua-cli'
+
 #
 # vim plugin support
 #
@@ -173,6 +176,8 @@ brew 'r'
 brew 'shellcheck'
 # scala
 brew 'coursier/formulas/coursier'
+# lua
+brew 'luarocks'
 
 #
 # datastores
