@@ -281,6 +281,8 @@ cask 'obsidian' # for note taking
 brew 'ffmpeg'
 brew 'gifsicle'
 # mas 'Pandan', id: 1569600264 # time awareness in menubar
+# mas 'MeetingBar', id: 1532419400 # show meetings in menubar
+# mas 'Pure Paste', id: 1611378436 # paste as plain text by default
 
 #
 # entertainment
