@@ -15,9 +15,8 @@
     CARGO_HOME: "{{ cargo_home }}"
     PATH: "{{ ansible_env.PATH }}:{{ anyenv_root }}/bin:/opt/homebrew/bin"
     GOPATH: "{{ local_home }}/src/go"
-    COURSIER_INSTALL_DIR: "{{ data_dir }}/coursier/bin"
   roles:
     - setup
-    - {role: macos, when: ansible_os_family == "Darwin"}
-    - {role: debian, when: ansible_os_family == "Debian"}
-    - {role: langs}
+    #- {role: macos, when: ansible_os_family == "Darwin"}
+    - { role: debian, when: ansible_os_family == "Debian" }
+    - { role: langs }

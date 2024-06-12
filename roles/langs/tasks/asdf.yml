@@ -11,7 +11,7 @@
   git:
     repo: "https://github.com/asdf-vm/asdf.git"
     dest: "{{ asdf_checkout }}"
-    version: v0.10.1
+    version: v0.14.0
     clone: yes
     update: no
   when: ansible_os_family == "Debian"
@@ -24,16 +24,16 @@
   shell: 'eval "$(/opt/homebrew/bin/brew shellenv)"'
   when: ansible_os_family == "Darwin"
 
-- name: Set macOS specific env vars (php)
-  shell: >
-    export PHP_CONFIGURE_OPTIONS="--with-zlib-dir=$(brew --prefix zlib) \
-      --with-bz2=$(brew --prefix bzip2) \
-      --with-iconv=$(brew --prefix libiconv) \
-      --with-readline=$(brew --prefix readline) \
-      --with-libedit=$(brew --prefix libedit) \
-      --with-tidy=$(brew --prefix tidy-html5) \
-      --with-bison=$(brew --prefix bison)"
-  when: ansible_os_family == "Darwin"
+# - name: Set macOS specific env vars (php)
+#   shell: >
+#     export PHP_CONFIGURE_OPTIONS="--with-zlib-dir=$(brew --prefix zlib) \
+#       --with-bz2=$(brew --prefix bzip2) \
+#       --with-iconv=$(brew --prefix libiconv) \
+#       --with-readline=$(brew --prefix readline) \
+#       --with-libedit=$(brew --prefix libedit) \
+#       --with-tidy=$(brew --prefix tidy-html5) \
+#       --with-bison=$(brew --prefix bison)"
+#   when: ansible_os_family == "Darwin"
 
 - name: Install plugins
   shell: asdf plugin-add {{ item.name }} {{ item.git_url | default('') }}

@@ -2,8 +2,6 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
-tap 'eqnxio/equinox'
-tap 'heroku/brew'
 tap 'homeport/tap'
 tap 'warrensbox/tap/tfswitch'
 
@@ -14,7 +12,6 @@ tap 'warrensbox/tap/tfswitch'
 # brew 'bash'
 brew 'git'
 brew 'vim'
-# brew 'zsh'
 # brew 'fish'
 brew 'curl'
 
@@ -54,11 +51,8 @@ brew 'pinentry-mac'
 # convenience cli utilities
 #
 
-# CLI prompt
-brew 'starship'
-
 # curl for SMTP
-brew 'swaks'
+# brew 'swaks'
 
 # better tui diff
 brew 'icdiff'
@@ -76,7 +70,7 @@ brew 'z'
 brew 'fd'
 
 # corrects previous shell command
-brew 'thefuck'
+# brew 'thefuck'
 
 # csv processor
 brew 'miller'
@@ -126,7 +120,7 @@ brew 'yank'
 brew 'noti'
 
 # cli tools for handling structured text
-brew 'crush-tools'
+# brew 'crush-tools'
 # find CIDR min/max
 brew 'ipcalc'
 
@@ -136,7 +130,7 @@ brew 'knqyf263/pet/pet'
 brew 'zoxide'
 
 # look at disk usage
-brew 'dua-cli'
+# brew 'dua-cli'
 
 #
 # vim plugin support
@@ -154,14 +148,14 @@ brew 'gotags'
 brew 'the_silver_searcher'
 
 # GH flavored markdown preview
-brew 'grip'
+# brew 'grip'
 # lint english prose
-brew 'proselint'
-brew 'vale'
-brew 'redpen'
-brew 'hadolint'
+# brew 'proselint'
+# brew 'vale'
+# brew 'redpen'
+# brew 'hadolint'
 # github action lint
-brew 'actionlint'
+# brew 'actionlint'
 brew 'lazygit'
 
 #
@@ -171,32 +165,29 @@ brew 'lazygit'
 # tkinter python support
 brew 'tcl-tk'
 # brew 'ghc'
-brew 'r'
+# brew 'r'
 # cask 'rstudio'
 brew 'shellcheck'
-# scala
-brew 'coursier/formulas/coursier'
 # lua
-brew 'luarocks'
+# brew 'luarocks'
 
 #
 # datastores
 #
 
-brew 'mysql', restart_service: true
-brew 'postgresql', restart_service: true
-brew 'redis', restart_service: true
-brew 'sqlite'
+# brew 'mysql', restart_service: true
+# brew 'postgresql', restart_service: true
+# brew 'redis', restart_service: true
+# brew 'sqlite'
 
 #
 # security, privacy, and authentication
 #
 
 brew 'gpg'
-cask 'keepassxc'
+# cask 'keepassxc'
 # cask 'keybase'
 # cask 'nordvpn'
-# cask 'lantern' # free vpn
 # brew 'wireshark'
 # brew 'sslsplit'
 # brew 'tcptrace'
@@ -225,7 +216,6 @@ cask 'github'
 # gh extension install dlvhdr/gh-dash
 brew 'gh'
 cask 'visual-studio-code'
-# brew 'heroku'
 # cask 'dash'
 # cask 'filezilla'
 # cask 'google-cloud-sdk'
@@ -234,8 +224,8 @@ cask 'visual-studio-code'
 # brew 'saml2aws'
 # brew 'aws-iam-authenticator'
 # brew 'kubectl'
-brew 'kubectx'
-brew 'stern'
+# brew 'kubectx'
+# brew 'stern'
 # brew 'helm'
 # brew 'kind'
 # cask 'ngrok'
@@ -246,20 +236,20 @@ brew 'stern'
 # cask 'anaconda2'
 # cask 'openrefine'
 # cask 'mactex'
-cask 'tunnelblick' # FOSS OpenVPN client
-brew 'minio/stable/mc'
+# cask 'tunnelblick' # FOSS OpenVPN client
+# brew 'minio/stable/mc'
 
 #
 # productivity apps
 #
 
 # text expander
-cask 'espanso'
+# cask 'espanso'
 # hide menubar items
 cask 'vanilla'
-cask 'dropbox'
+# cask 'dropbox'
 cask 'caffeine'
-cask 'disk-inventory-x'
+# cask 'disk-inventory-x'
 # clipboard manager
 cask 'flycut'
 # cask 'firefox'
@@ -277,7 +267,7 @@ brew 'duti'
 # cask 'keycastr'
 # screen recorder
 # cask 'kap'
-cask 'obsidian' # for note taking
+# cask 'obsidian' # for note taking
 brew 'ffmpeg'
 brew 'gifsicle'
 # mas 'Pandan', id: 1569600264 # time awareness in menubar

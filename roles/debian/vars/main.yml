@@ -157,7 +157,6 @@ remote_executables:
     name: ccat
 
 flatpaks:
-  - com.getpostman.Postman
   - us.zoom.Zoom
   - com.valvesoftware.Steam
   - org.signal.Signal
@@ -169,6 +168,5 @@ fonts:
     name: Hack
 
 snapcraft:
-  - heroku
   - universal-ctags
   - emote
