@@ -157,6 +157,7 @@ brew 'the_silver_searcher'
 # github action lint
 # brew 'actionlint'
 brew 'lazygit'
+brew 'git-lfs'
 
 #
 # programming languages (env + dep management, linting)
