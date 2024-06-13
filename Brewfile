@@ -1,9 +1,5 @@
 tap 'homebrew/cask'
-tap 'homebrew/cask-drivers'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 tap 'homeport/tap'
-tap 'warrensbox/tap/tfswitch'
 
 #
 # override old, shitty, or missing system defaults
@@ -92,9 +88,6 @@ brew 'pv'
 # pretty list dirs
 brew 'tree'
 brew 'broot'
-
-# pretty ls
-brew 'exa'
 
 # colorize a bunch of unix commands
 brew 'grc'
