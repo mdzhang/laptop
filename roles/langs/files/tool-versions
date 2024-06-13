@@ -7,5 +7,5 @@ ruby 3.3.3
 rust 1.78.0
 terraform 1.8.5
 terraform-docs 0.18.0
-tflint 0.51.1<D-l>
+tflint 0.51.1
 tfsec 1.28.6
